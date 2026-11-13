@@ -1,8 +1,8 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.8 (Build 008)  
-> **Status**: Ativo & Operacional (Logo Vanta em Alta Resolução • Zero Margens Mortas • Visibilidade & Contraste Aprimorados em Todo o Site)  
-> **Última Atualização**: 2026-11-13 02:36  
+> **Versão Atual**: Alpha 0.9 (Build 009)  
+> **Status**: Ativo & Operacional (Remoção Total de Roxo • Paleta 100% Harmonizada em Dourado Vanta #E5A93C & Vantablack)  
+> **Última Atualização**: 2026-11-13 02:46  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **ID da Aplicação Discord**: `1567751920645308548`  
 > **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
@@ -21,11 +21,10 @@
 > O bot e o site compartilham o mesmo banco de dados (Google Cloud Firestore no projeto `vantinha-e9fca`). **O site NÃO escreve ou lê dados do Firestore diretamente.**  
 > O bot funciona como a **Fonte Única da Verdade (Master Data Gateway)**. Toda e qualquer leitura, gravação, cálculo de segurança (idade de conta, histórico de IPs, vínculo de contas secundárias/alts) e atribuição de cargos no Discord é executada pelo bot através da API Fastify.
 
-> 💎 **DIRETRIZ VISUAL DA LOGO VANTA**:  
-> 1. A logo deve permanecer **bare** (sem cards, bordas ou molduras ao redor).  
-> 2. Sem número de versão (`v1.0`).  
-> 3. Zero margens mortas / transparentes: a marca preenche 100% do seu contêiner.  
-> 4. Contraste e saturação de ouro ricos e vivos para destacar imediatamente contra o fundo escuro (`#0a0a0c`).
+> 💎 **DIRETRIZ VISUAL: COR DOURADA COMO PRINCIPAL ABSOLUTA (ZERO ROXO)**:  
+> 1. A cor principal do ecossistema Vanta é o **Dourado Oficial (`#E5A93C`)**.  
+> 2. Bordas de cards de embeds do Discord, destaques e acentos devem usar **Dourado (`border-gold`)**, nunca roxo/violeta (`#7c3aed`), para não quebrar a identidade visual do site.  
+> 3. A logo deve permanecer **bare** (sem cards, bordas ou molduras ao redor) e sem versão (`v1.0`).
 
 ---
 
@@ -82,6 +81,17 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.9] — Remoção Total de Roxo & Alinhamento Estrito em Dourado Vanta
+- **Data**: 2026-11-13 02:46
+- **Resumo da Entrega**:
+  1. **Remoção da Borda Roxa dos Embeds**: No simulador `BotPreviewCard`, a borda lateral das abas (`/ping`, `/help`, `/counter`) utilizava `#7c3aed`, que quebrava a harmonia da paleta. Foi substituída pela cor primária oficial Vanta Gold (`border-gold` / `#E5A93C`).
+  2. **Harmonização Global**: Atualizada a chave `vantaAccent` no `constants.ts` para `#E5A93C`, eliminando qualquer resquício de cor conflitante.
+  3. **Identidade Intacta**: Mantida a estética Vantablack + Dourado Oficial, com zero divergências visuais.
+- **Arquivos Afetados**:
+  - `src/components/BotPreviewCard.tsx`
+  - `src/lib/constants.ts`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.8] — Solução Definitiva da Visibilidade e Qualidade da Logo Vanta
 - **Data**: 2026-11-13 02:36

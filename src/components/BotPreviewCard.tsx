@@ -99,7 +99,7 @@ export function BotPreviewCard() {
 
         {/* Tab 1: /ping */}
         {activeTab === 'ping' && (
-          <div className="rounded-lg bg-[#2b2d31] border-l-2 border-[#7c3aed] p-3.5 space-y-3">
+          <div className="rounded-lg bg-[#2b2d31] border-l-2 border-gold p-3.5 space-y-3">
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-xs font-bold text-white">Latência do Gateway</div>
@@ -134,7 +134,7 @@ export function BotPreviewCard() {
 
         {/* Tab 2: /help */}
         {activeTab === 'help' && (
-          <div className="rounded-lg bg-[#2b2d31] border-l-2 border-[#7c3aed] p-3.5 space-y-2.5">
+          <div className="rounded-lg bg-[#2b2d31] border-l-2 border-gold p-3.5 space-y-2.5">
             <div className="text-xs font-bold text-white">Central de Comandos</div>
             <p className="text-[11px] text-gray-400">
               Controle o servidor com menus interativos rápidos e fáceis de usar.
@@ -158,7 +158,7 @@ export function BotPreviewCard() {
 
         {/* Tab 3: /counter */}
         {activeTab === 'counter' && (
-          <div className="rounded-lg bg-[#2b2d31] border-l-2 border-[#7c3aed] p-3.5 space-y-3">
+          <div className="rounded-lg bg-[#2b2d31] border-l-2 border-gold p-3.5 space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-white">Contador Interativo</span>
               <span className="text-sm font-mono font-bold text-gold px-2.5 py-0.5 rounded bg-black/40 border border-gold/30">

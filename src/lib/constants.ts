@@ -23,7 +23,7 @@ export const VANTA_CONSTANTS = {
     vanta: "#0a0a0c",
     vantaDark: "#121217",
     vantaLight: "#1c1c24",
-    vantaAccent: "#7c3aed",
+    vantaAccent: "#E5A93C",
     vantaCyan: "#06b6d4",
     vantaBorder: "rgba(229, 169, 60, 0.18)",
     discord: "#5865F2",
