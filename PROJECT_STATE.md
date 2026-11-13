@@ -5,6 +5,7 @@
 > **Última Atualização**: 2026-11-13 02:24  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **ID da Aplicação Discord**: `1567751920645308548`  
+> **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
 > **Master Gateway**: Fastify Bot Server (`http://127.0.0.1:8080`) com CORS liberado (`origin: "*"`)  
 
 ---
