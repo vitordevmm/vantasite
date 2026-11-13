@@ -1,8 +1,8 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.10 (Build 010)  
-> **Status**: Ativo & Operacional (Sigilo Total de Infraestrutura na UI • Métricas Públicas: Uptime 99.9%, +350 Servidores, +12.000 Membros)  
-> **Última Atualização**: 2026-11-13 02:51  
+> **Versão Atual**: Alpha 0.11 (Build 011)  
+> **Status**: Ativo & Operacional (Licença Anti-Plágio Criada • Documentação Multi-Idiomas no GitHub: PT-BR, EN, ES)  
+> **Última Atualização**: 2026-11-13 03:18  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **ID da Aplicação Discord**: `1567751920645308548`  
 > **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
@@ -11,6 +11,11 @@
 ---
 
 ## 1. Princípios Fundamentais de Arquitetura & Diretrizes do Operador
+
+> ⚖️ **LICENÇA & POLÍTICA DE NÃO-PLÁGIO (PROPRIETARY SOURCE CODE)**:  
+> **O código, layout, design, copy e componentes são estritamente protegidos contra plágio e redistribuição.**  
+> Qualquer cópia não autorizada, white-labeling, rebrand ou apropriação indevida é passível de medidas legais e DMCA Takedown imediato.  
+> Documentação mantida em 3 idiomas no repositório: Português (`README.md`), Inglês (`README.en.md`) e Espanhol (`README.es.md`).
 
 > 🔒 **REGRA MANDATÓRIA DE SIGILO & DISCRIÇÃO TÉCNICA NA UI**:  
 > **O site público NUNCA deve expor dados internos de infraestrutura do bot.**  
@@ -86,6 +91,25 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.11] — Licença Anti-Plágio & Documentação Multi-Idiomas no GitHub
+- **Data**: 2026-11-13 03:18
+- **Resumo da Entrega**:
+  1. **Criação da Licença Anti-Plágio (`LICENSE`)**:
+     - Licença proprietária internacional (*All Rights Reserved*) redigida em 3 idiomas (PT-BR, EN, ES).
+     - Proibição expressa de plágio, clonagem, republicação, venda, white-labeling ou apropriação indevida de código, layout, logo e design tokens.
+     - Previsão formal de ações judiciais e notificações de DMCA Takedown perante o GitHub e provedores de hospedagem.
+  2. **Documentação Multi-Idiomas no GitHub**:
+     - **`README.md`**: Atualizado com seletor de idiomas no topo e seção de licença anti-plágio.
+     - **`README.en.md`**: Versão completa em Inglês com arquitetura, capacidades de segurança e setup.
+     - **`README.es.md`**: Versão completa em Espanhol com arquitetura, capacidades de segurança e setup.
+     - Imagem da logo nos READMEs atualizada para `public/logo.png` em alta definição.
+- **Arquivos Afetados**:
+  - `LICENSE`
+  - `README.md`
+  - `README.en.md`
+  - `README.es.md`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.10] — Sigilo Total de Infraestrutura Interna na UI & Métricas da Comunidade
 - **Data**: 2026-11-13 02:51

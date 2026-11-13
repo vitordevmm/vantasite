@@ -1,0 +1,112 @@
+PROPRIETARY SOURCE CODE LICENSE (ALL RIGHTS RESERVED)
+COPYRIGHT (C) 2026 COMUNIDADE VANTA / VÍTOR DEV (vitordevmm). ALL RIGHTS RESERVED.
+
+================================================================================
+TERMOS E CONDIÇÕES DE USO, NÃO-PLÁGIO E DIREITOS AUTORAIS
+TERMS AND CONDITIONS OF USE, ANTI-PLAGIARISM AND INTELLECTUAL PROPERTY
+TÉRMINOS Y CONDICIONES DE USO, NO-PLAGIO Y PROPIEDAD INTELECTUAL
+================================================================================
+
+[PT-BR] AVISO LEGAL DE PROPRIEDADE INTELECTUAL:
+O código-fonte, arquitetura, design visual, identidade de marca, scripts,
+componentes de interface, textos, logotipos e toda a documentação contida
+neste repositório ("Software") são de propriedade intelectual exclusiva da
+Comunidade Vanta e de seu autor original Vítor Dev (vitordevmm).
+
+1. PROIBIÇÃO EXPRESSA DE PLÁGIO E CÓPIA:
+   É expressamente proibido a qualquer pessoa física ou jurídica:
+   a) Copiar, clonar, reproduzir, republicar, duplicar ou redistribuir, total
+      ou parcialmente, o código-fonte, estilos (CSS/Tailwind), marca ou assets
+      deste projeto em qualquer plataforma (incluindo GitHub, GitLab, sites,
+      bots de terceiros ou serviços concorrentes).
+   b) Praticar plágio, adulteração de créditos, white-labeling, rebrand ou
+      reivindicar autoria moral ou patrimonial sobre qualquer elemento deste
+      Software.
+   c) Utilizar este código-fonte, no todo ou em parte, para fins comerciais,
+      venda, revenda, licenciamento, monetização direta ou indireta, ou como
+      base para produtos comerciais sem autorização prévia por escrito.
+   d) Realizar engenharia reversa, descompilação ou extração de módulos
+      para implementação em soluções públicas ou privadas de terceiros.
+
+2. PERMISSÕES LIMITADAS:
+   É concedida permissão estrita e revogável unicamente para:
+   a) Visualização e estudo pessoal diretamente no repositório oficial
+      hospedado em https://github.com/vitordevmm/vantasite.
+   b) Submissão de contribuições e correções via Pull Requests diretamente
+      para o repositório oficial, sob concordância de cessão de direitos.
+
+3. MEDIDAS JUDICIAIS E TAKEDOWN:
+   Qualquer violação, cópia não autorizada, plágio ou reutilização ilícita
+   resultará em notificações formais de infração sob a legislação de Direitos
+   Autorais (Lei Federal Brasileira nº 9.610/1998, Lei nº 9.609/1998 de Software),
+   pedidos de remoção imediata via DMCA (Digital Millennium Copyright Act) junto
+   ao GitHub e provedores de hospedagem, e as medidas legais cabíveis nas
+   esferas cível e penal.
+
+--------------------------------------------------------------------------------
+
+[EN] PROPRIETARY AND CONFIDENTIAL INTELLECTUAL PROPERTY NOTICE:
+The source code, architecture, visual design, brand identity, scripts, UI
+components, copy, logos, and all documentation contained in this repository
+("Software") are the exclusive proprietary intellectual property of the
+Vanta Community and its original author Vítor Dev (vitordevmm).
+
+1. STRICT PROHIBITION OF PLAGIARISM AND UNAUTHORIZED USE:
+   All individuals and legal entities are strictly prohibited from:
+   a) Copying, cloning, reproducing, republishing, duplicating, or redistributing,
+      in whole or in part, the source code, styles (CSS/Tailwind), branding,
+      or assets of this project across any platform (including GitHub, GitLab,
+      websites, third-party bots, or competing services).
+   b) Committing plagiarism, tampering with author credits, white-labeling,
+      rebranding, or claiming authorship over any component of this Software.
+   c) Using this Software, in whole or in part, for commercial purposes, sale,
+      resale, sublicensing, direct or indirect monetization, or as a base for
+      commercial products without prior written authorization.
+   d) Reverse engineering, decompiling, or extracting modules for implementation
+      in public or private third-party solutions.
+
+2. LIMITED PERMISSION:
+   Permission is granted solely for:
+   a) Personal inspection, review, and educational study directly on the official
+      repository hosted at https://github.com/vitordevmm/vantasite.
+   b) Contributing upstream improvements via Pull Requests directly to the official
+      repository.
+
+3. LEGAL ACTION AND DMCA ENFORCEMENT:
+   Any infringement, unauthorized reproduction, plagiarism, or illegal redistribution
+   will result in immediate DMCA takedown notices to GitHub and hosting providers,
+   as well as civil and criminal legal proceedings under applicable international
+   copyright treaties and domestic laws.
+
+--------------------------------------------------------------------------------
+
+[ES] AVISO LEGAL DE PROPIEDAD INTELECTUAL Y NO PLAGIO:
+El código fuente, arquitectura, diseño visual, identidad de marca, scripts,
+componentes de interfaz, textos, logotipos y toda la documentación contenida
+en este repositorio ("Software") son propiedad intelectual exclusiva de la
+Comunidad Vanta y de su autor original Vítor Dev (vitordevmm).
+
+1. PROHIBICIÓN EXPRESA DE PLAGIO Y COPIA:
+   Queda terminantemente prohibido a cualquier persona física o jurídica:
+   a) Copiar, clonar, reproducir, republicar, duplicar o redistribuir, total
+      o parcialmente, el código fuente, estilos, marca o recursos de este
+      proyecto en cualquier plataforma.
+   b) Cometer plagio, eliminar o alterar créditos, hacer white-labeling,
+      rebranding o reclamar autoría sobre cualquier elemento de este Software.
+   c) Usar este código fuente para fines comerciales, venta, reventa, licencias
+      o monetización sin autorización previa por escrito.
+
+2. MEDIDAS LEGALES:
+   Cualquier infracción será objeto de notificaciones formales de retirada
+   DMCA ante GitHub y proveedores de alojamiento, así como de las acciones
+   legales correspondientes por violación de derechos de autor y propiedad
+   intelectual.
+
+================================================================================
+DISCLAIMER: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+================================================================================

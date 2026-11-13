@@ -1,6 +1,11 @@
 <div align="center">
 
-  <img src="public/logo.svg" alt="Vanta Logo" width="80" height="80" />
+  **🌐 Idiomas / Languages:**  
+  [🇧🇷 Português (Brasil)](README.md) &nbsp;•&nbsp; [🇺🇸 English](README.en.md) &nbsp;•&nbsp; [🇪🇸 Español](README.es.md)
+
+  <br/><br/>
+
+  <img src="public/logo.png" alt="Vanta Logo" width="90" height="75" />
 
   # 🌌 VANTA SITE
   ### Portal Web Oficial & Dashboard de Segurança • Vantinha
@@ -190,6 +195,18 @@ npm run start
 ## 🔒 Governança e Ledger Contínuo
 
 Este projeto segue o protocolo rigoroso do **Vanta Ledger**, mantendo o histórico de cada ciclo de melhoria documentado no arquivo [PROJECT_STATE.md](./PROJECT_STATE.md). Todas as diretrizes de código, regras de sigilo e padrões estéticos são rastreados de forma contínua.
+
+---
+
+## ⚖️ Licença e Política Anti-Plágio
+
+Este projeto é protegido sob a **Proprietary Source Code License (All Rights Reserved)**.
+
+> 🛑 **PROIBIÇÃO EXPRESSA DE CÓPIA E PLÁGIO**:  
+> É expressamente proibida a cópia, clonagem, republicação, redistribuição, venda ou apropriação indevida deste código-fonte, identidade visual, design ou componentes, no todo ou em parte, em qualquer plataforma ou serviço concorrente.  
+> Todos os direitos são reservados à **Comunidade Vanta** e ao autor **Vítor Dev** ([vitordevmm](https://github.com/vitordevmm)). Violações estão sujeitas a ações legais e pedidos imediatos de DMCA Takedown.
+
+Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE).
 
 ---
 
