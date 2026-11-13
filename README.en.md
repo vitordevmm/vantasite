@@ -116,49 +116,13 @@ The Vanta visual design adopts an austere, noble Vantablack and Gold aesthetic:
 
 ---
 
-## 🚀 Getting Started
+## 🌐 Official Ecosystem & Access
 
-### 1. Prerequisites
-* **Node.js**: `v20.x` or higher
-* **Package Manager**: `npm`, `pnpm`, or `yarn`
-* **Bot Cluster**: Active Vantinha instance running the API Gateway
+Vantinha is a proprietary, closed ecosystem operated exclusively for the **Vanta Community**:
 
-### 2. Clone the Repository
-```bash
-git clone https://github.com/vitordevmm/vantasite.git
-cd vantasite
-npm install
-```
-
-### 3. Configure Environment Variables
-Create your local environment configuration:
-```bash
-cp .env.example .env.local
-```
-Configure your credentials:
-```env
-# Fastify Bot API Gateway
-BOT_API_URL="http://127.0.0.1:8080"
-BOT_API_SECRET_KEY="vanta_secret_token_dev"
-BOT_API_ENCRYPTION_KEY="vanta_aes256_super_secret_cipher_key_2026"
-
-# Discord OAuth2
-DISCORD_CLIENT_ID="1567751920645308548"
-DISCORD_CLIENT_SECRET="your_discord_secret"
-DISCORD_REDIRECT_URI="http://localhost:3000"
-```
-
-### 4. Run Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### 5. Build for Production
-```bash
-npm run build
-npm run start
-```
+* **Add the Bot**: [Invite Vantinha to your Discord Server](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=localhost%3A3000&scope=identify+guilds+guilds.join)
+* **Official Community**: [Join Vanta Hub on Discord](https://discord.gg/vanta)
+* **Web Dashboard**: Secure Discord OAuth2 authentication for authorized community members.
 
 ---
 

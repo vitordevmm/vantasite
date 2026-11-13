@@ -1,8 +1,8 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.11 (Build 011)  
-> **Status**: Ativo & Operacional (Licença Anti-Plágio Criada • Documentação Multi-Idiomas no GitHub: PT-BR, EN, ES)  
-> **Última Atualização**: 2026-11-13 03:18  
+> **Versão Atual**: Alpha 0.12 (Build 012)  
+> **Status**: Ativo & Operacional (Remoção de Tutoriais de Replicação nos READMEs • Vitrine Institucional Exclusiva com Links Oficiais)  
+> **Última Atualização**: 2026-11-13 03:21  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **ID da Aplicação Discord**: `1567751920645308548`  
 > **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
@@ -11,6 +11,10 @@
 ---
 
 ## 1. Princípios Fundamentais de Arquitetura & Diretrizes do Operador
+
+> 🚫 **PROIBIÇÃO DE TUTORIAIS DE REPLICAÇÃO / SETUP NOS READMES**:  
+> **É estritamente proibido ensinar a clonar, instalar dependências, configurar .env ou rodar localmente nos arquivos README.**  
+> O repositório no GitHub funciona exclusivamente como vitrine oficial e apresentação da marca, contendo links de acesso oficial e nunca um guia de replicação ou template aberto.
 
 > ⚖️ **LICENÇA & POLÍTICA DE NÃO-PLÁGIO (PROPRIETARY SOURCE CODE)**:  
 > **O código, layout, design, copy e componentes são estritamente protegidos contra plágio e redistribuição.**  
@@ -91,6 +95,18 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.12] — Remoção de Tutoriais de Replicação nos READMEs
+- **Data**: 2026-11-13 03:21
+- **Resumo da Entrega**:
+  1. **Eliminação de Tutoriais de Setup nos READMEs**: Removidas todas as seções de "Como Executar", "Getting Started" e "Inicio Rápido" (`git clone`, `npm install`, configuração de `.env`, `npm run dev`), bem como mapas detalhados de arquivos locais.
+  2. **Foco Exclusivo em Vitrine & Acesso Oficial**: Os três arquivos de documentação (`README.md`, `README.en.md`, `README.es.md`) agora apresentam exclusivamente links oficiais de convite do bot, servidor do Vanta Hub e login institucional.
+  3. **Diretriz Registrada no Ledger**: Fixada a regra proibindo instruções de replicação em qualquer documentação pública.
+- **Arquivos Afetados**:
+  - `README.md`
+  - `README.en.md`
+  - `README.es.md`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.11] — Licença Anti-Plágio & Documentação Multi-Idiomas no GitHub
 - **Data**: 2026-11-13 03:18

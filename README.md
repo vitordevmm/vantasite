@@ -122,73 +122,13 @@ O ecossistema Vanta adota uma estética minimalista, austera e nobre:
 
 ```
 vantasite/
-├── public/
-│   └── logo.svg                 # Logo oficial Vanta (bare, sem contêineres)
-├── src/
-│   ├── app/
-│   │   ├── api/
-│   │   │   └── auth/
-│   │   │       ├── callback/    # Callback OAuth2 + sync de telemetria com o bot
-│   │   │       ├── logout/      # Encerramento de sessão
-│   │   │       └── me/          # Leitura de sessão HTTP-only
-│   │   ├── callback/page.tsx    # Sequência visual de login (anel neon ouro para verde)
-│   │   ├── dashboard/page.tsx   # Painel conectado ao Fastify :8080 (dados ao vivo)
-│   │   ├── verify/page.tsx      # Portal de verificação de identidade de membros
-│   │   ├── layout.tsx           # Configuração de fontes Space Grotesk e Plus Jakarta
-│   │   └── page.tsx             # Landing page autoral com dados reais do bot
-│   ├── components/
-│   │   ├── BotPreviewCard.tsx   # Simulador interativo dos comandos (/help, /ping, /counter)
-│   │   ├── Footer.tsx           # Rodapé da comunidade
-│   │   ├── Navbar.tsx           # Barra de navegação com logo bare e login Discord
-│   │   └── NeonAvatar.tsx       # Avatar com halo neon rotativo ouro/verde
-│   └── lib/
-│       ├── constants.ts         # Metadados e dados reais do bot Vantinha
-│       ├── cryptoClient.ts      # Cliente criptográfico turnkey AES-256-GCM
-│       └── discord.ts           # Auxiliares de API Discord e formatadores de avatar
-├── .env.example                 # Modelo limpo de variáveis de ambiente
-├── tailwind.config.ts           # Configuração de design tokens oficiais
-├── tsconfig.json                # Configuração TypeScript
-├── PROJECT_STATE.md             # Livro-razão contínuo de versões e decisões
-└── README.md                    # Este manual
-```
+## 🌐 Ecossistema & Acesso Oficial
 
----
+O Vantinha é um sistema fechado e proprietário, operado exclusivamente para os servidores da **Comunidade Vanta**:
 
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-* **Node.js** `>= 18.18.0` ou `>= 20.0.0`
-* **NPM** ou gerenciador de pacotes equivalente
-* O servidor do **Vantinha** rodando em `http://127.0.0.1:8080` (Fastify Gateway)
-
-### 1. Clonar o Repositório
-```bash
-git clone https://github.com/vitordevmm/vantasite.git
-cd vantasite
-```
-
-### 2. Instalar Dependências
-```bash
-npm install
-```
-
-### 3. Configurar Variáveis de Ambiente
-Copie o arquivo de exemplo e preencha suas chaves locais:
-```bash
-cp .env.example .env.local
-```
-
-### 4. Executar em Modo de Desenvolvimento
-```bash
-npm run dev
-```
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
-
-### 5. Compilar para Produção
-```bash
-npm run build
-npm run start
-```
+* **Adicionar o Bot**: [Convidar Vantinha para o seu Servidor](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=localhost%3A3000&scope=identify+guilds+guilds.join)
+* **Comunidade Oficial**: [Entrar no Vanta Hub](https://discord.gg/vanta)
+* **Painel Web**: Autenticação segura via Discord OAuth2 disponível para membros autorizados.
 
 ---
 
