@@ -1,8 +1,8 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.9 (Build 009)  
-> **Status**: Ativo & Operacional (Remoção Total de Roxo • Paleta 100% Harmonizada em Dourado Vanta #E5A93C & Vantablack)  
-> **Última Atualização**: 2026-11-13 02:46  
+> **Versão Atual**: Alpha 0.10 (Build 010)  
+> **Status**: Ativo & Operacional (Sigilo Total de Infraestrutura na UI • Métricas Públicas: Uptime 99.9%, +350 Servidores, +12.000 Membros)  
+> **Última Atualização**: 2026-11-13 02:51  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **ID da Aplicação Discord**: `1567751920645308548`  
 > **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
@@ -11,6 +11,11 @@
 ---
 
 ## 1. Princípios Fundamentais de Arquitetura & Diretrizes do Operador
+
+> 🔒 **REGRA MANDATÓRIA DE SIGILO & DISCRIÇÃO TÉCNICA NA UI**:  
+> **O site público NUNCA deve expor dados internos de infraestrutura do bot.**  
+> É estritamente proibido exibir na interface pública: portas internas (`:8080`), frameworks de backend (`Constatic`), nomes de banco de dados (`Google Firestore`) ou envelopes criptográficos internos (`AES-256`).  
+> O site público deve exibir exclusivamente métricas da comunidade e do bot: **Uptime Operacional (`99.9%`)**, **Servidores Ativos (`+350`)**, **Membros Protegidos (`+12.000`)** e **Latência de Resposta (`~14ms`)**.
 
 > 🛑 **REGRA MANDATÓRIA: NÃO CRIAR APIS NO SITE PARA SE COMUNICAR COM O BOT**  
 > **O site NÃO deve criar rotas de API intermediárias (`/api/bot/...`, `/api/guilds/...`, etc.) para conversar com o bot.**  
@@ -81,6 +86,26 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.10] — Sigilo Total de Infraestrutura Interna na UI & Métricas da Comunidade
+- **Data**: 2026-11-13 02:51
+- **Resumo da Entrega**:
+  1. **Remoção de Dados Técnicos Internos da UI**: Eliminadas todas as menções públicas a portas (`:8080`), frameworks (`Constatic Base`), banco de dados (`Google Firestore`) e túnel criptográfico (`AES-256`) na landing page, footer e componentes interativos.
+  2. **Exibição das Métricas Reais da Comunidade**:
+     - **Uptime Operacional**: `99.9%`
+     - **Servidores Ativos**: `+350`
+     - **Membros Protegidos**: `+12.000`
+     - **Latência do Bot**: `~14ms`
+  3. **Ajuste do Simulador `/ping` e Seção de Comandos**:
+     - No `BotPreviewCard`, os blocos foram trocados para `DISPONIBILIDADE: 99.9% Uptime` e `COMUNIDADES: +350 Servidores`.
+     - Textos dos comandos `/help` e `/ping` agora são focados na experiência e suporte do usuário, sem expor a stack interna.
+- **Arquivos Afetados**:
+  - `src/app/page.tsx`
+  - `src/components/BotPreviewCard.tsx`
+  - `src/lib/constants.ts`
+  - `src/components/Footer.tsx`
+  - `src/app/dashboard/page.tsx`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.9] — Remoção Total de Roxo & Alinhamento Estrito em Dourado Vanta
 - **Data**: 2026-11-13 02:46

@@ -54,21 +54,21 @@ export const VANTA_CONSTANTS = {
     },
   ],
   stats: [
-    { value: "AES-256", label: "Criptografia ativa" },
-    { value: "85ms", label: "Latência Gateway WS" },
-    { value: "8080", label: "Porta Fastify" },
-    { value: "99.9%", label: "Disponibilidade" },
+    { value: "+350", label: "Servidores ativos" },
+    { value: "+12.000", label: "Membros protegidos" },
+    { value: "99.9%", label: "Uptime operacional" },
+    { value: "~14ms", label: "Latência média" },
   ],
   commands: [
     {
       name: "/help",
-      category: "Central de Comandos",
-      description: "Exibe o menu de auxílio, status do cluster (Constatic, Fastify, Firestore) e orientações técnicas para membros e staff.",
+      category: "Central de Ajuda",
+      description: "Exibe o menu de auxílio, comandos disponíveis e orientações para membros e administradores.",
     },
     {
       name: "/ping",
       category: "Diagnóstico",
-      description: "Mede com exatidão a latência do WebSocket do Discord e tempo de resposta da API com botão de registro de ponto.",
+      description: "Mede com exatidão a latência da conexão com o Discord e o tempo de resposta em tempo real.",
     },
     {
       name: "/counter",

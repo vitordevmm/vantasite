@@ -98,14 +98,14 @@ export default function DashboardPage() {
       const data = await res.json();
       if (data.status === 'online') {
         setHandshakeStatus('success');
-        setHandshakeDetails(`Bot Fastify Online na porta 8080 • Servidor Vanta Hub Conectado.`);
+        setHandshakeDetails(`Cluster Online • Servidor Vanta Hub Conectado.`);
       } else {
         setHandshakeStatus('failed');
-        setHandshakeDetails('Resposta inesperada do Bot Fastify');
+        setHandshakeDetails('Resposta inesperada do Gateway');
       }
     } catch (err: any) {
       setHandshakeStatus('failed');
-      setHandshakeDetails('Bot Fastify offline na porta 8080');
+      setHandshakeDetails('Cluster offline ou inacessível no momento');
     }
   };
 
@@ -390,7 +390,7 @@ export default function DashboardPage() {
             <div>
               <span className="text-gray-500 block text-[10px]">INFRAESTRUTURA</span>
               <span className="text-gold font-semibold mt-0.5 block">
-                Constatic + Fastify :8080
+                Cluster Dedicado 24/7
               </span>
             </div>
           </div>

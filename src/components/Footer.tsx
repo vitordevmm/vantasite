@@ -82,7 +82,7 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-gray-400 mb-3">Infraestrutura</h4>
             <p className="text-xs text-gray-400 leading-relaxed">
-              Hospedado em cluster dedicado com sincronização contínua no Google Cloud Firestore e alta disponibilidade.
+              Hospedado em cluster dedicado com sincronização contínua e alta disponibilidade 24/7.
             </p>
           </div>
         </div>

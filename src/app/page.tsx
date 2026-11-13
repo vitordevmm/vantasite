@@ -51,11 +51,11 @@ function LandingPageContent() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-vanta-dark border border-gold/30 text-xs font-mono text-gold">
                 <span>Vanta Hub</span>
                 <span className="text-gray-500">•</span>
-                <span>Fastify Gateway :8080</span>
+                <span>+350 Servidores</span>
                 <span className="text-gray-500">•</span>
                 <span className="flex items-center gap-1 text-success">
                   <span className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
-                  Cluster Online
+                  100% Online
                 </span>
               </div>
 
@@ -64,7 +64,7 @@ function LandingPageContent() {
               </h1>
 
               <p className="text-base text-gray-400 max-w-xl leading-relaxed">
-                Verificação de identidade com detecção de contas secundárias (alts), auditoria contra proxy e conexões suspeitas, túnel criptografado em AES-256-GCM e comandos interativos de nova geração em Discord Components V2.
+                Verificação de identidade com detecção de contas secundárias (alts), auditoria contra proxy e conexões suspeitas, proteção ativa 24/7 e comandos interativos de nova geração.
               </p>
 
               {/* Action Buttons */}
@@ -90,19 +90,19 @@ function LandingPageContent() {
                 </a>
               </div>
 
-              {/* Real Bot Stats Bar */}
+              {/* Bot Community Stats Bar */}
               <div className="pt-6 border-t border-white/[0.08] grid grid-cols-3 gap-6 text-left">
                 <div>
-                  <div className="font-mono font-bold text-lg text-gold">AES-256</div>
-                  <div className="text-xs text-gray-500">Criptografia em túnel</div>
+                  <div className="font-mono font-bold text-lg text-gold">99.9%</div>
+                  <div className="text-xs text-gray-500">Uptime operacional</div>
                 </div>
                 <div>
-                  <div className="font-mono font-bold text-lg text-white">85ms</div>
-                  <div className="text-xs text-gray-500">Latência Gateway WS</div>
+                  <div className="font-mono font-bold text-lg text-white">+350</div>
+                  <div className="text-xs text-gray-500">Servidores ativos</div>
                 </div>
                 <div>
-                  <div className="font-mono font-bold text-lg text-white">:8080</div>
-                  <div className="text-xs text-gray-500">Porta Fastify ativa</div>
+                  <div className="font-mono font-bold text-lg text-white">+12.000</div>
+                  <div className="text-xs text-gray-500">Membros protegidos</div>
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ function LandingPageContent() {
               </div>
               <h3 className="font-display font-bold text-base text-white">Detecção Global de Alts</h3>
               <p className="text-xs text-gray-400 leading-relaxed">
-                Algoritmo dedicado escaneia a base do Firestore e vincula contas secundárias no mesmo IP, impedindo evasão de punições e criação de fakes.
+                Identifica e vincula contas secundárias no mesmo IP de forma automática, impedindo invasões, evasão de punições e criação de perfis fakes.
               </p>
             </div>
 
@@ -180,9 +180,9 @@ function LandingPageContent() {
               <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold">
                 <Lock className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-base text-white">Túnel Cifrado AES-256-GCM</h3>
+              <h3 className="font-display font-bold text-base text-white">Auditoria Ativa e Anti-Proxy</h3>
               <p className="text-xs text-gray-400 leading-relaxed">
-                Todas as requisições trocadas com a API Fastify são empacotadas em envelopes com IV de 12 bytes e Auth Tag de 16 bytes invioláveis.
+                Monitoramento contínuo contra acessos suspeitos, bloqueio rigoroso de redes VPN/Proxy e portal de verificação segura com token exclusivo.
               </p>
             </div>
 
@@ -190,9 +190,9 @@ function LandingPageContent() {
               <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold">
                 <Cpu className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-base text-white">Master Data Gateway</h3>
+              <h3 className="font-display font-bold text-base text-white">Sincronização 24/7</h3>
               <p className="text-xs text-gray-400 leading-relaxed">
-                O bot centraliza 100% das escritas no Firestore, validação de permissões e atribuição de cargos no Discord com consistência absoluta.
+                Atribuição automática de cargos, persistência imediata de configurações e integridade com alta disponibilidade contínua no ecossistema Vanta.
               </p>
             </div>
           </div>
@@ -210,7 +210,7 @@ function LandingPageContent() {
               Comandos disponíveis no servidor
             </h2>
             <p className="text-sm text-gray-400">
-              Construídos sobre o framework Constatic com responders nativos do Discord.
+              Interface interativa com botões e seletores nativos do Discord.
             </p>
           </div>
 
@@ -218,10 +218,10 @@ function LandingPageContent() {
             <div className="p-5 rounded-xl bg-vanta-dark border border-white/[0.08] space-y-2">
               <div className="flex items-center justify-between">
                 <code className="text-xs font-mono font-bold text-gold">/help</code>
-                <span className="text-[10px] font-mono text-gray-500">Central de Comandos</span>
+                <span className="text-[10px] font-mono text-gray-500">Central de Ajuda</span>
               </div>
               <p className="text-xs text-gray-400">
-                Menu de auxílio com orientações do cluster, arquitetura técnica (Constatic, Fastify, Firestore) e suporte.
+                Menu de auxílio com lista de comandos, orientações do bot e suporte para administradores.
               </p>
             </div>
 
@@ -231,17 +231,17 @@ function LandingPageContent() {
                 <span className="text-[10px] font-mono text-gray-500">Diagnóstico Real</span>
               </div>
               <p className="text-xs text-gray-400">
-                Mede a latência exata do WebSocket do Discord e tempo de resposta da interação com botão de registro de ponto.
+                Mede a latência da conexão com o Discord e o tempo de resposta do bot em tempo real.
               </p>
             </div>
 
             <div className="p-5 rounded-xl bg-vanta-dark border border-white/[0.08] space-y-2">
               <div className="flex items-center justify-between">
                 <code className="text-xs font-mono font-bold text-gold">/counter</code>
-                <span className="text-[10px] font-mono text-gray-500">Estado Reativo</span>
+                <span className="text-[10px] font-mono text-gray-500">Interatividade</span>
               </div>
               <p className="text-xs text-gray-400">
-                Contador interativo em Discord Components V2 que atualiza em tempo real sem recarregar a mensagem.
+                Contador interativo em Discord Components que atualiza em tempo real sem recarregar a mensagem.
               </p>
             </div>
           </div>

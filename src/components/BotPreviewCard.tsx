@@ -102,8 +102,8 @@ export function BotPreviewCard() {
           <div className="rounded-lg bg-[#2b2d31] border-l-2 border-gold p-3.5 space-y-3">
             <div className="flex items-center justify-between">
               <div>
-                <div className="text-xs font-bold text-white">Latência do Gateway</div>
-                <div className="text-[11px] text-gray-400">Servidor Fastify operacional na porta 8080</div>
+                <div className="text-xs font-bold text-white">Latência do Bot</div>
+                <div className="text-[11px] text-gray-400">Conexão ativa com o Discord em tempo real</div>
               </div>
               <span className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-black/40 text-gold border border-gold/30">
                 {ping}ms
@@ -112,12 +112,12 @@ export function BotPreviewCard() {
 
             <div className="grid grid-cols-2 gap-2 text-[11px]">
               <div className="bg-[#1e1f22] p-2 rounded border border-white/[0.04]">
-                <span className="text-gray-500 block text-[10px] font-mono">FRAMEWORK</span>
-                <span className="text-gray-200 font-mono">Constatic Base</span>
+                <span className="text-gray-500 block text-[10px] font-mono">DISPONIBILIDADE</span>
+                <span className="text-gray-200 font-mono">99.9% Uptime</span>
               </div>
               <div className="bg-[#1e1f22] p-2 rounded border border-white/[0.04]">
-                <span className="text-gray-500 block text-[10px] font-mono">BANCO</span>
-                <span className="text-gray-200 font-mono">Google Firestore</span>
+                <span className="text-gray-500 block text-[10px] font-mono">COMUNIDADES</span>
+                <span className="text-gray-200 font-mono">+350 Servidores</span>
               </div>
             </div>
 
