@@ -90,11 +90,11 @@ function VerifyContent() {
 
       <div className="w-full max-w-md rounded-2xl bg-[#121217] border border-white/[0.08] p-8 shadow-2xl relative">
         {/* Brand Header - Bare logo sem card */}
-        <div className="flex items-center justify-center gap-2.5 mb-6">
-          <div className="relative w-7 h-7 flex-shrink-0">
-            <Image src="/logo.svg" alt="Vanta" fill className="object-contain" priority />
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="relative w-9 h-9 flex-shrink-0">
+            <Image src="/logo.png" alt="Vanta" fill className="object-contain" priority />
           </div>
-          <span className="font-display font-bold text-base tracking-tight text-white">
+          <span className="font-display font-bold text-lg tracking-tight text-white">
             Vanta <span className="text-gold font-mono text-xs">Security Gateway</span>
           </span>
         </div>

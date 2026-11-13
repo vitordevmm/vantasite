@@ -11,11 +11,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           {/* Brand - Sem card em volta da logo */}
           <div className="space-y-3 md:col-span-1">
-            <div className="flex items-center gap-2.5">
-              <div className="relative w-7 h-7 flex-shrink-0">
-                <Image src="/logo.svg" alt="Vanta" fill className="object-contain" />
+            <div className="flex items-center gap-3">
+              <div className="relative w-9 h-9 flex-shrink-0">
+                <Image src="/logo.png" alt="Vanta" fill className="object-contain" />
               </div>
-              <span className="font-display font-bold text-base text-white">Vantinha</span>
+              <span className="font-display font-bold text-lg text-white">Vantinha</span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed">
               O assistente oficial para comunidades no Discord. Moderação ativa, economia, tickets e controle em tempo real.

@@ -193,11 +193,11 @@ export default function DashboardPage() {
       {/* Top Header - Bare Logo sem card */}
       <header className="border-b border-white/[0.08] bg-[#0a0a0c]/90 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="relative w-7 h-7 flex-shrink-0">
-              <Image src="/logo.svg" alt="Vanta Logo" fill className="object-contain" priority />
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative w-9 h-9 flex-shrink-0">
+              <Image src="/logo.png" alt="Vanta Logo" fill className="object-contain" priority />
             </div>
-            <span className="font-display font-bold text-sm tracking-tight text-white">
+            <span className="font-display font-bold text-base tracking-tight text-white">
               Vantinha <span className="text-gold font-mono text-xs">Painel Web</span>
             </span>
           </Link>

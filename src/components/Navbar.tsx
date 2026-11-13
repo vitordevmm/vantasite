@@ -34,17 +34,17 @@ export function Navbar({ currentUser }: NavbarProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo & Brand - Sem card em volta da logo e sem versão */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative w-8 h-8 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Vanta Logo"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
-            <span className="font-display font-bold text-lg tracking-tight text-white group-hover:text-gold transition-colors">
+            <span className="font-display font-bold text-xl tracking-tight text-white group-hover:text-gold transition-colors">
               Vantinha
             </span>
           </Link>

@@ -20,7 +20,7 @@ export interface DiscordGuild {
 }
 
 export function getDiscordAvatarUrl(user: DiscordUser | null, size: number = 256): string {
-  if (!user) return '/logo.svg';
+  if (!user) return '/logo.png';
   if (user.avatar) {
     const format = user.avatar.startsWith('a_') ? 'gif' : 'png';
     return `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${format}?size=${size}`;

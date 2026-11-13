@@ -1,8 +1,8 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.7 (Build 007)  
-> **Status**: Ativo & Operacional (Arquitetura Direta Fastify :8080 • Zero APIs Criadas no Site • Copy com Dados 100% Reais do Bot)  
-> **Última Atualização**: 2026-11-13 02:24  
+> **Versão Atual**: Alpha 0.8 (Build 008)  
+> **Status**: Ativo & Operacional (Logo Vanta em Alta Resolução • Zero Margens Mortas • Visibilidade & Contraste Aprimorados em Todo o Site)  
+> **Última Atualização**: 2026-11-13 02:36  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **ID da Aplicação Discord**: `1567751920645308548`  
 > **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
@@ -20,6 +20,12 @@
 > ⚠️ **REGRA DE OURO DO BANCO DE DADOS**:  
 > O bot e o site compartilham o mesmo banco de dados (Google Cloud Firestore no projeto `vantinha-e9fca`). **O site NÃO escreve ou lê dados do Firestore diretamente.**  
 > O bot funciona como a **Fonte Única da Verdade (Master Data Gateway)**. Toda e qualquer leitura, gravação, cálculo de segurança (idade de conta, histórico de IPs, vínculo de contas secundárias/alts) e atribuição de cargos no Discord é executada pelo bot através da API Fastify.
+
+> 💎 **DIRETRIZ VISUAL DA LOGO VANTA**:  
+> 1. A logo deve permanecer **bare** (sem cards, bordas ou molduras ao redor).  
+> 2. Sem número de versão (`v1.0`).  
+> 3. Zero margens mortas / transparentes: a marca preenche 100% do seu contêiner.  
+> 4. Contraste e saturação de ouro ricos e vivos para destacar imediatamente contra o fundo escuro (`#0a0a0c`).
 
 ---
 
@@ -44,7 +50,8 @@ O site e a landing page agora utilizam exclusivamente os dados técnicos reais d
 ```
 Vanta site/
 ├── public/
-│   └── logo.svg                 # Logo oficial do Vanta (sempre bare)
+│   ├── logo.png                 # Logo oficial de alta resolução 772x645 sem bordas mortas
+│   └── logo.svg                 # SVG oficial vetorizado com viewBox ajustado (772x645)
 ├── src/
 │   ├── app/
 │   │   ├── api/
@@ -75,6 +82,40 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.8] — Solução Definitiva da Visibilidade e Qualidade da Logo Vanta
+- **Data**: 2026-11-13 02:36
+- **Resumo da Entrega**:
+  1. **Diagnóstico da Causa Raiz da Logo Minúscula e Embaçada**:
+     - O arquivo SVG original possuía uma viewBox gigante de `1500x1500px`, mas o emblema ocupava apenas `754x630px` no centro, desperdiçando mais de 58% de espaço em margens vazias.
+     - Ao ser inserido em contêineres de `24px` a `32px`, a área visível do triângulo encolhia para apenas `10px` a `13px`, tornando os traços dourados e o lettering interno "VANTA" ilegíveis.
+  2. **Recorte Perfeito e Aprimoramento de Resolução**:
+     - Recorte cirúrgico do bounding box real (`772x645px`) com zero pixels mortos.
+     - Tratamento de contraste e saturação de ouro para realçar o dourado Vanta nobre (`#E5A93C`) contra o fundo escuro (`#0a0a0c`).
+     - Geração de `public/logo.png` em alta densidade de pixels (164KB de pura definição) e `public/logo.svg` com `viewBox="0 0 772 645"`.
+  3. **Aumento e Ajuste dos Contêineres em Todo o Site**:
+     - **Navbar (`src/components/Navbar.tsx`)**: Ajustado para `w-9 h-9 sm:w-10 sm:h-10` com logo bare, permitindo que a insígnia dourada seja o elemento de destaque ao lado de "Vantinha".
+     - **Card de Mensagem Discord (`src/components/BotPreviewCard.tsx`)**: Avatar oficial configurado como disco `w-10 h-10` com emblema nítido de `34x30px`, idêntico ao avatar verificado de bots de topo no Discord.
+     - **Footer (`src/components/Footer.tsx`)**: Expandido para `w-9 h-9` com alinhamento refinado.
+     - **Dashboard (`src/app/dashboard/page.tsx`)**: Logo expandida para `w-9 h-9` no cabeçalho.
+     - **Página de Verificação (`src/app/verify/page.tsx`)**: Logo expandida para `w-9 h-9`.
+     - **Página de Callback (`src/app/callback/page.tsx`)**: Logo expandida para `w-9 h-9` e fallback para `/logo.png`.
+     - **Avatar Neon e OpenGraph (`src/components/NeonAvatar.tsx` / `src/app/layout.tsx`)**: Atualizado para `logo.png` de alta qualidade, garantindo prévias nítidas em Discord e redes sociais.
+  4. **Build e Testes**: Compilação 100% aprovada em `npx tsc --noEmit` e `npm run build` (10/10 páginas).
+- **Arquivos Afetados**:
+  - `public/logo.png`
+  - `public/logo.svg`
+  - `Logo vanta.svg`
+  - `src/components/Navbar.tsx`
+  - `src/components/BotPreviewCard.tsx`
+  - `src/components/Footer.tsx`
+  - `src/app/dashboard/page.tsx`
+  - `src/app/verify/page.tsx`
+  - `src/app/callback/page.tsx`
+  - `src/components/NeonAvatar.tsx`
+  - `src/lib/discord.ts`
+  - `src/app/layout.tsx`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.7] — Adoção da Regra "Zero APIs Criadas no Site" & Copy com Dados 100% Reais
 - **Data**: 2026-11-13 02:24

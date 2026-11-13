@@ -51,7 +51,7 @@ export function NeonAvatar({
       >
         <div className="relative w-full h-full rounded-full overflow-hidden bg-vanta-dark border border-white/10">
           <Image
-            src={src || '/logo.svg'}
+            src={src || '/logo.png'}
             alt={alt || 'Avatar'}
             fill
             sizes={`${size}px`}

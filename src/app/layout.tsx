@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   title: 'Vantinha — O Bot Oficial da Comunidade Vanta',
   description: 'O bot definitivo para servidores no Discord. Moderação ativa contra invasões, tickets privados, economia e painel de controle em tempo real.',
   icons: {
-    icon: '/logo.svg',
-    shortcut: '/logo.svg',
-    apple: '/logo.svg',
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
   openGraph: {
     title: 'Vantinha — O Bot Oficial da Comunidade Vanta',
     description: 'Mais de 12.000 membros protegidos e +350 servidores ativos. Moderação, tickets e painel web integrado.',
-    images: ['/logo.svg'],
+    images: ['/logo.png'],
   },
 };
 

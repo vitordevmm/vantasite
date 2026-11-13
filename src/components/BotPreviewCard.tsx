@@ -73,8 +73,15 @@ export function BotPreviewCard() {
       <div className="p-4 bg-[#313338]">
         {/* Author info */}
         <div className="flex items-start gap-3 mb-3">
-          <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
-            <Image src="/logo.svg" alt="Vantinha" fill className="object-contain" />
+          <div className="relative w-10 h-10 rounded-full bg-[#1e1f22] border border-white/[0.08] flex items-center justify-center flex-shrink-0 p-1">
+            <Image
+              src="/logo.png"
+              alt="Vantinha"
+              width={34}
+              height={30}
+              className="object-contain"
+              priority
+            />
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">

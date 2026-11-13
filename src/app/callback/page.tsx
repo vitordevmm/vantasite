@@ -99,18 +99,18 @@ function CallbackContent() {
     return () => clearInterval(timer);
   }, [step3Done, router]);
 
-  const avatarUrl = user ? getDiscordAvatarUrl(user, 256) : '/logo.svg';
+  const avatarUrl = user ? getDiscordAvatarUrl(user, 256) : '/logo.png';
   const displayName = user?.global_name || user?.username || 'Verificando...';
 
   return (
     <div className="min-h-screen bg-vanta flex flex-col items-center justify-center p-4 relative font-sans">
       <div className="w-full max-w-sm rounded-2xl bg-vanta-dark border border-white/10 p-8 shadow-2xl text-center relative">
         {/* Brand Header */}
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <div className="relative w-6 h-6">
-            <Image src="/logo.svg" alt="Vanta" fill className="object-contain" priority />
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="relative w-9 h-9 flex-shrink-0">
+            <Image src="/logo.png" alt="Vanta" fill className="object-contain" priority />
           </div>
-          <span className="font-display font-bold text-sm tracking-tight text-white">
+          <span className="font-display font-bold text-base tracking-tight text-white">
             Autenticação Vanta
           </span>
         </div>
