@@ -103,12 +103,12 @@ The **Vanta Site** serves as the primary web interface for the **Vanta Hub** com
 
 ## 🎨 Official Color Palette (Design Tokens)
 
-The Vanta visual design adopts an austere, noble Vantablack and Gold aesthetic:
+The Vanta visual design adopts an austere, noble Gold aesthetic:
 
 | Token | Hex Value | Application |
 | :--- | :--- | :--- |
 | `vantaGold` | `#E5A93C` | **Official Vanta Gold** (Brand identity, primary CTA, badges, highlights) |
-| `vanta` | `#0a0a0c` | Main background (*Vantablack* aesthetic) |
+| `vanta` | `#0a0a0c` | Main background |
 | `vantaDark` | `#121217` | Card surfaces, modals, containers, and sidebars |
 | `vantaLight` | `#1c1c24` | Subtle borders, dividers, and secondary interactive layers |
 | `success` | `#22c55e` | Verified status indicators and successful handshake tags |
@@ -118,7 +118,7 @@ The Vanta visual design adopts an austere, noble Vantablack and Gold aesthetic:
 
 ## 🌐 Official Ecosystem & Access
 
-Vantinha is a proprietary, closed ecosystem operated exclusively for the **Vanta Community**:
+Vantinha is a proprietary, closed ecosystem:
 
 * **Official Production Portal**: [https://vantasite-puce.vercel.app](https://vantasite-puce.vercel.app)
 * **Add the Bot**: [Invite Vantinha to your Discord Server](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=https%3A%2F%2Fvantasite-puce.vercel.app&scope=identify+guilds+guilds.join)
@@ -139,13 +139,13 @@ This software is protected under the **Proprietary Source Code License (All Righ
 
 > 🛑 **STRICT PROHIBITION OF PLAGIARISM AND UNAUTHORIZED USE**:  
 > Cloning, copying, redistributing, republishing, reselling, or misappropriating any portion of this source code, brand identity, visual assets, or interface components across competing platforms, bots, or third-party services is strictly prohibited.  
-> All intellectual property rights are reserved by **Vanta Community** and **Vítor Dev** ([vitordevmm](https://github.com/vitordevmm)). Violations will be met with immediate legal action and DMCA Takedown enforcement.
+> All intellectual property rights are reserved by **Vantinha** and **Vítor Dev** ([vitordevmm](https://github.com/vitordevmm)). Violations will be met with immediate legal action and DMCA Takedown enforcement.
 
 For complete terms and conditions, refer to the [LICENSE](./LICENSE) file.
 
 ---
 
 <div align="center">
-  <p><strong>Vanta Community</strong> • <em>Gold & Vantablack</em></p>
-  <p>© 2026 Vanta Hub. All rights reserved.</p>
+  <p><strong>Vantinha</strong></p>
+  <p>© 2026 Vantinha. All rights reserved.</p>
 </div>

@@ -107,7 +107,7 @@ O ecossistema Vanta adota uma estética minimalista, austera e nobre:
 | Token | Hex | Aplicação |
 | :--- | :--- | :--- |
 | **`vantaGold`** | `#E5A93C` | **Dourado Oficial Vanta** (Cor primária, CTAs e destaques) |
-| **`vanta`** | `#0a0a0c` | Fundo principal da página (Vantablack aesthetic) |
+| **`vanta`** | `#0a0a0c` | Fundo principal da página |
 | **`vantaDark`** | `#121217` | Fundo de cartões, modais, sidebars e containers |
 | **`vantaLight`** | `#1c1c24` | Bordas sutis, divisórias e cartões secundários |
 | **`success`** | `#22c55e` | Verde esmeralda de aprovação e verificado |
@@ -118,7 +118,7 @@ O ecossistema Vanta adota uma estética minimalista, austera e nobre:
 
 ## 🌐 Ecossistema & Acesso Oficial
 
-O Vantinha é um sistema fechado e proprietário, operado exclusivamente para os servidores da **Comunidade Vanta**:
+O Vantinha é um sistema fechado e proprietário:
 
 * **Portal Oficial em Produção**: [https://vantasite-puce.vercel.app](https://vantasite-puce.vercel.app)
 * **Adicionar o Bot**: [Convidar Vantinha para o seu Servidor](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=https%3A%2F%2Fvantasite-puce.vercel.app&scope=identify+guilds+guilds.join)
@@ -139,13 +139,13 @@ Este projeto é protegido sob a **Proprietary Source Code License (All Rights Re
 
 > 🛑 **PROIBIÇÃO EXPRESSA DE CÓPIA E PLÁGIO**:  
 > É expressamente proibida a cópia, clonagem, republicação, redistribuição, venda ou apropriação indevida deste código-fonte, identidade visual, design ou componentes, no todo ou em parte, em qualquer plataforma ou serviço concorrente.  
-> Todos os direitos são reservados à **Comunidade Vanta** e ao autor **Vítor Dev** ([vitordevmm](https://github.com/vitordevmm)). Violações estão sujeitas a ações legais e pedidos imediatos de DMCA Takedown.
+> Todos os direitos são reservados ao **Vantinha** e ao autor **Vítor Dev** ([vitordevmm](https://github.com/vitordevmm)). Violações estão sujeitas a ações legais e pedidos imediatos de DMCA Takedown.
 
 Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE).
 
 ---
 
 <div align="center">
-  <p><strong>Comunidade Vanta</strong> • <em>Dourado & Vantablack</em></p>
-  <p>© 2026 Vanta Hub. Todos os direitos reservados.</p>
+  <p><strong>Vantinha</strong></p>
+  <p>© 2026 Vantinha. Todos os direitos reservados.</p>
 </div>

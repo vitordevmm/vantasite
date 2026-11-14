@@ -17,16 +17,16 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://vantasite-puce.vercel.app'),
-  title: 'Vantinha — O Bot Oficial da Comunidade Vanta',
-  description: 'Assistente oficial de segurança e telemetria da comunidade Vanta. Verificação de identidade com detecção de contas secundárias (alts), auditoria contra proxy e comandos interativos.',
+  title: 'Vantinha — Assistente Oficial de Segurança & Telemetria',
+  description: 'Assistente oficial de segurança e telemetria do Vantinha. Verificação de identidade com detecção de contas secundárias (alts), auditoria contra proxy e comandos interativos.',
   icons: {
     icon: '/logo.png',
     shortcut: '/logo.png',
     apple: '/logo.png',
   },
   openGraph: {
-    title: 'Vantinha — O Bot Oficial da Comunidade Vanta',
-    description: 'Assistente oficial de segurança e telemetria da comunidade Vanta. Verificação de identidade, detecção de alts e telemetria em tempo real.',
+    title: 'Vantinha — Assistente Oficial de Segurança & Telemetria',
+    description: 'Assistente oficial de segurança e telemetria do Vantinha. Verificação de identidade, detecção de alts e telemetria em tempo real.',
     url: 'https://vantasite-puce.vercel.app',
     images: ['/logo.png'],
   },

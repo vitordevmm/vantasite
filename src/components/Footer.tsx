@@ -20,7 +20,7 @@ export function Footer() {
               <span className="font-display font-bold text-lg text-white">Vantinha</span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed">
-              O assistente oficial de segurança e telemetria da comunidade Vanta. Verificação de identidade, detecção de alts e comandos nativos.
+              O assistente oficial de segurança e telemetria do Vantinha. Verificação de identidade, detecção de alts e comandos nativos.
             </p>
             <div className="flex items-center gap-2 pt-1 text-xs text-gray-400 font-mono">
               <span className="w-2 h-2 rounded-full bg-success" />
@@ -50,9 +50,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Community */}
+          {/* Discord */}
           <div>
-            <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-gray-400 mb-3">Comunidade</h4>
+            <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-gray-400 mb-3">Discord</h4>
             <ul className="space-y-2 text-xs text-gray-400">
               <li>
                 <a
@@ -61,7 +61,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-gold transition-colors flex items-center gap-1"
                 >
-                  Servidor Vanta <ArrowUpRight className="w-3 h-3 opacity-60" />
+                  Servidor de Suporte <ArrowUpRight className="w-3 h-3 opacity-60" />
                 </a>
               </li>
               <li>
@@ -112,13 +112,11 @@ export function Footer() {
         </div>
 
         <div className="pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500 font-mono">
-          <p>© {new Date().getFullYear()} Comunidade Vanta. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Vantinha. Todos os direitos reservados.</p>
           <div className="flex items-center gap-4">
             <Link href="/termos" className="hover:text-gold transition-colors">Termos</Link>
             <span>•</span>
             <Link href="/privacidade" className="hover:text-gold transition-colors">Privacidade</Link>
-            <span>•</span>
-            <span>Dourado & Vantablack</span>
           </div>
         </div>
       </div>

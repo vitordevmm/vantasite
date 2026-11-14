@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidade — Vanta Site & Vantinha',
-  description: 'Política de privacidade e proteção de dados do portal oficial e bot Vantinha da Comunidade Vanta.',
+  description: 'Política de privacidade e proteção de dados do portal oficial e bot Vantinha.',
 };
 
 export default function PrivacidadePage() {
@@ -49,7 +49,7 @@ export default function PrivacidadePage() {
                 <span>Compromisso com a Privacidade e Transparência</span>
               </h2>
               <p>
-                A <strong className="text-white">Comunidade Vanta</strong> e os desenvolvedores do assistente <strong className="text-white">Vantinha</strong> estão comprometidos em proteger a privacidade, a integridade e os dados de todos os membros e visitantes do nosso ecossistema.
+                Os desenvolvedores do assistente <strong className="text-white">Vantinha</strong> estão comprometidos em proteger a privacidade, a integridade e os dados de todos os membros e visitantes do nosso ecossistema.
               </p>
               <p className="text-xs text-gray-400">
                 Esta política esclarece quais dados coletamos, a base legal para seu processamento, onde são armazenados e como você pode exercer seus direitos fundamentais de privacidade.
@@ -156,7 +156,7 @@ export default function PrivacidadePage() {
                 Os registros são mantidos de maneira confidencial em bancos de dados do <strong className="text-white">Google Cloud Firestore</strong> sob estrita política de controle de acesso.
               </p>
               <div className="p-3.5 rounded-xl bg-gold/5 border border-gold/20 text-xs text-gold">
-                <strong>Cláusula de Não-Comercialização:</strong> A Comunidade Vanta jamais vende, aluga, troca ou compartilha dados de usuários com anunciantes, corretores de dados (data brokers) ou quaisquer parceiros comerciais externos.
+                <strong>Cláusula de Não-Comercialização:</strong> O Vantinha jamais vende, aluga, troca ou compartilha dados de usuários com anunciantes, corretores de dados (data brokers) ou quaisquer parceiros comerciais externos.
               </div>
             </section>
 
@@ -171,7 +171,7 @@ export default function PrivacidadePage() {
                 <li>Confirmação da existência de dados cadastrais vinculados ao seu ID Discord;</li>
                 <li>Acesso facilitado às informações de dossiê de segurança;</li>
                 <li>Correção de dados incompletos ou inexatos;</li>
-                <li>Exclusão definitiva de seu registro da nossa base de dados (sujeita à desvinculação da comunidade Vanta Hub).</li>
+                <li>Exclusão definitiva de seu registro da nossa base de dados (sujeita à desvinculação do servidor Vanta Hub).</li>
               </ul>
             </section>
 

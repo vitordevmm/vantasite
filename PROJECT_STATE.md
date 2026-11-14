@@ -1,8 +1,8 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.16 (Build 016)  
-> **Status**: Ativo & Operacional em Produção Vercel (`https://vantasite-puce.vercel.app`) • Termos de Uso, Política de Privacidade e Consentimento de Cookies LGPD  
-> **Última Atualização**: 2026-11-14 20:20  
+> **Versão Atual**: Alpha 0.17 (Build 017)  
+> **Status**: Ativo & Operacional em Produção Vercel (`https://vantasite-puce.vercel.app`) • Ajuste de Naming (Vantinha em Vez de "Comunidade" e Remoção de "Dourado & Vantablack")  
+> **Última Atualização**: 2026-11-14 20:30  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **Domínio Oficial de Produção**: `https://vantasite-puce.vercel.app`  
 > **ID da Aplicação Discord**: `1567751920645308548`  
@@ -115,6 +115,27 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.17] — Ajuste de Naming & Remoção de Taglines Genéricas
+- **Data**: 2026-11-14 20:30
+- **Resumo da Entrega**:
+  1. **Remoção de "Dourado & Vantablack"**: Eliminada a tagline redundante do rodapé do site (`src/components/Footer.tsx`) e dos arquivos de documentação (`README.md`, `README.en.md`, `README.es.md`).
+  2. **Unificação da Identidade Institucional para "Vantinha"**:
+     - Substituído "Comunidade Vanta" / "Comunidade" por **"Vantinha"** em todo o rodapé, metadados de cabeçalho (`layout.tsx`), card do simulador Discord (`BotPreviewCard.tsx`), constantes (`constants.ts`) e termos legais (`/termos` e `/privacidade`).
+     - Rodapé atualizado para: `© 2026 Vantinha. Todos os direitos reservados.`
+  3. **Validação**: TypeScript verificado com 0 erros e rotas estáticas 100% preservadas.
+- **Arquivos Afetados**:
+  - `src/components/Footer.tsx`
+  - `src/components/BotPreviewCard.tsx`
+  - `src/lib/constants.ts`
+  - `src/app/layout.tsx`
+  - `src/app/page.tsx`
+  - `src/app/termos/page.tsx`
+  - `src/app/privacidade/page.tsx`
+  - `README.md`
+  - `README.en.md`
+  - `README.es.md`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.16] — Termos de Uso, Política de Privacidade & Consentimento de Cookies LGPD
 - **Data**: 2026-11-14 20:20

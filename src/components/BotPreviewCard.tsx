@@ -108,7 +108,7 @@ export function BotPreviewCard({ botStatus }: BotPreviewCardProps) {
               <span className="text-[11px] text-gray-400">hoje às 01:40</span>
             </div>
             <p className="text-[11px] text-gray-400 mt-0.5 font-mono">
-              Assistente Oficial • Comunidade Vanta
+              Assistente Oficial • Vantinha
             </p>
           </div>
         </div>
@@ -134,7 +134,7 @@ export function BotPreviewCard({ botStatus }: BotPreviewCardProps) {
                 </span>
               </div>
               <div className="bg-[#1e1f22] p-2 rounded border border-white/[0.04]">
-                <span className="text-gray-500 block text-[10px] font-mono">COMUNIDADE</span>
+                <span className="text-gray-500 block text-[10px] font-mono">SERVIDOR</span>
                 <span className="text-gray-200 font-mono">
                   {botStatus?.guilds.list?.[0]?.name || 'Vanta Hub'}
                 </span>

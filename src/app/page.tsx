@@ -61,7 +61,7 @@ function LandingPageContent() {
             {/* Left Column: Direct, real bot data & human copy */}
             <div className="lg:col-span-7 space-y-6 text-left">
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
-                O assistente oficial de segurança e infraestrutura do Vanta.
+                O assistente oficial de segurança e infraestrutura do Vantinha.
               </h1>
 
               <p className="text-base text-gray-400 max-w-xl leading-relaxed">

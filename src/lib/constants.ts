@@ -8,7 +8,7 @@ export const VANTA_CONSTANTS = {
   bot: {
     name: "Vantinha",
     tag: "Vantinha#0419",
-    tagline: "O assistente oficial da comunidade Vanta",
+    tagline: "O assistente oficial de segurança e telemetria do Vantinha",
     id: "1567751920645308548",
     guildName: "Vanta Hub",
     guildId: "1567751748762869874",

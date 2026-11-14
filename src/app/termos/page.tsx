@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Termos de Uso — Vanta Site & Vantinha',
-  description: 'Termos e condições de uso oficiais do site e assistente Vantinha da Comunidade Vanta.',
+  description: 'Termos e condições de uso oficiais do site e assistente Vantinha.',
 };
 
 export default function TermosPage() {
@@ -120,7 +120,7 @@ export default function TermosPage() {
                 <span>Propriedade Intelectual & Direitos Autorais</span>
               </h2>
               <p>
-                Todo o conteúdo deste website — incluindo, mas não se limitando a marcas, logotipos, ícones, código-fonte, layout, estética Vantablack e documentações associadas — é de propriedade exclusiva da <strong className="text-white">Comunidade Vanta</strong> e de seu desenvolvedor titular.
+                Todo o conteúdo deste website — incluindo, mas não se limitando a marcas, logotipos, ícones, código-fonte, layout e documentações associadas — é de propriedade exclusiva do <strong className="text-white">Vantinha</strong> e de seu desenvolvedor titular.
               </p>
               <p className="text-xs text-gray-400">
                 O código é protegido pela licença proprietária (All Rights Reserved). Qualquer tentativa de cópia comercial, rebranding ou white-labeling será tratada via notificação de DMCA Takedown e responsabilização civil e criminal.
