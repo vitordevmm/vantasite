@@ -1,8 +1,8 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.12 (Build 012)  
-> **Status**: Ativo & Operacional (Remoção de Tutoriais de Replicação nos READMEs • Vitrine Institucional Exclusiva com Links Oficiais)  
-> **Última Atualização**: 2026-11-13 03:21  
+> **Versão Atual**: Alpha 0.13 (Build 013)  
+> **Status**: Ativo & Operacional (Remoção de Pill Badge Genérico do Hero • Design Limpo, Direto e Autoral Sem Estética de IA)  
+> **Última Atualização**: 2026-11-14 19:49  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **ID da Aplicação Discord**: `1567751920645308548`  
 > **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
@@ -95,6 +95,15 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.13] — Remoção de Pill Badge Genérico do Hero (Anti-AI Cliché)
+- **Data**: 2026-11-14 19:49
+- **Resumo da Entrega**:
+  1. **Remoção do Badge Flutuante**: Excluído o contêiner em formato de pílula (`Vanta Hub • +350 Servidores • 100% Online`) posicionado acima do H1 na hero section.
+  2. **Estética Autoral & Minimalista**: O hero agora abre diretamente no título de alto impacto arquitetural, eliminando o visual padronizado/clichê de páginas geradas por IA.
+- **Arquivos Afetados**:
+  - `src/app/page.tsx`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.12] — Remoção de Tutoriais de Replicação nos READMEs
 - **Data**: 2026-11-13 03:21
