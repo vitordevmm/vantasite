@@ -15,7 +15,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://vantasite-puce.vercel.app'),
   title: 'Vantinha — O Bot Oficial da Comunidade Vanta',
   description: 'Assistente oficial de segurança e telemetria da comunidade Vanta. Verificação de identidade com detecção de contas secundárias (alts), auditoria contra proxy e comandos interativos.',
   icons: {
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Vantinha — O Bot Oficial da Comunidade Vanta',
     description: 'Assistente oficial de segurança e telemetria da comunidade Vanta. Verificação de identidade, detecção de alts e telemetria em tempo real.',
+    url: 'https://vantasite-puce.vercel.app',
     images: ['/logo.png'],
   },
 };

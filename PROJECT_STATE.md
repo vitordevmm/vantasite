@@ -1,9 +1,10 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.14 (Build 014)  
-> **Status**: Ativo & Operacional (Telemetria Real do Vantinha via Firestore `system/bot_status` • Remoção Total de Métricas e Módulos Fictícios)  
-> **Última Atualização**: 2026-11-14 20:10  
+> **Versão Atual**: Alpha 0.15 (Build 015)  
+> **Status**: Ativo & Operacional em Produção Vercel (`https://vantasite-puce.vercel.app`) • Domínio, OAuth2 e Links Oficiais Atualizados  
+> **Última Atualização**: 2026-11-14 20:15  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
+> **Domínio Oficial de Produção**: `https://vantasite-puce.vercel.app`  
 > **ID da Aplicação Discord**: `1567751920645308548`  
 > **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
 > **Master Gateway**: Fastify Bot Server (`http://127.0.0.1:8080`) com CORS liberado (`origin: "*"`)  
@@ -109,6 +110,33 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.15] — Implantação em Produção na Vercel & Sincronização do Domínio OAuth2
+- **Data**: 2026-11-14 20:15
+- **Resumo da Entrega**:
+  1. **Domínio Oficial de Produção**: Configurado `https://vantasite-puce.vercel.app` em todas as constantes e variáveis de ambiente.
+  2. **Atualização do Discord OAuth2**:
+     - `authUrl` em `src/lib/constants.ts` atualizado com `redirect_uri=https%3A%2F%2Fvantasite-puce.vercel.app`.
+     - `src/app/api/auth/callback/route.ts` atualizado com suporte dinâmico a múltiplos candidatos de `redirect_uri` (Vercel com/sem barra e fallback local), prevenindo rejeições na troca do código de autorização.
+     - `src/app/callback/page.tsx` agora envia dinamicamente a origem ativa (`window.location.origin`).
+  3. **Metadados e SEO**:
+     - `src/app/layout.tsx`: `metadataBase` atualizado para `https://vantasite-puce.vercel.app` com tags OpenGraph devidamente ancoradas no domínio de produção.
+  4. **Documentação Multi-Idiomas Sincronizada**:
+     - Links oficiais em `README.md`, `README.en.md` e `README.es.md` apontando para o portal de produção e link OAuth2 com redirect URI da Vercel.
+  5. **Configuração de Ambiente**:
+     - `.env.local` e `.env.example` atualizados com `DISCORD_REDIRECT_URI="https://vantasite-puce.vercel.app"` e `NEXT_PUBLIC_SITE_URL`.
+- **Arquivos Afetados**:
+  - `src/lib/constants.ts`
+  - `src/app/layout.tsx`
+  - `src/app/api/auth/callback/route.ts`
+  - `src/app/callback/page.tsx`
+  - `src/app/page.tsx`
+  - `README.md`
+  - `README.en.md`
+  - `README.es.md`
+  - `.env.local`
+  - `.env.example`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.14] — Integração de Telemetria Real do Vantinha via Firestore & Remoção de Dados Fictícios
 - **Data**: 2026-11-14 20:10

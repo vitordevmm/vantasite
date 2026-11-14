@@ -17,7 +17,7 @@ function LandingPageContent() {
   const [currentUser, setCurrentUser] = useState<DiscordUser | null>(null);
   const [botStatus, setBotStatus] = useState<SystemStatusDocument | null>(null);
 
-  // Auto redirect if Discord returns to localhost:3000/?code=...
+  // Auto redirect if Discord returns to /?code=...
   useEffect(() => {
     const code = searchParams.get('code');
     if (code) {

@@ -3,7 +3,9 @@ import { sendSecureBotRequest } from '@/lib/cryptoClient';
 
 export async function POST(req: NextRequest) {
   try {
-    const { code } = await req.json();
+    const body = await req.json();
+    const code = body?.code;
+    const clientRedirectUri = body?.redirectUri;
 
     if (!code) {
       return NextResponse.json({ error: 'Código de autorização não fornecido' }, { status: 400 });
@@ -11,39 +13,36 @@ export async function POST(req: NextRequest) {
 
     const clientId = process.env.DISCORD_CLIENT_ID || '1567751920645308548';
     const clientSecret = process.env.DISCORD_CLIENT_SECRET || 'oA6DnowOtYyUdyeZvZc7noEQGQAWgeD4';
-    const redirectUri = process.env.DISCORD_REDIRECT_URI || 'http://localhost:3000';
+    
+    // Lista ordenada de URIs de redirecionamento candidatas (Vercel produção e fallback local)
+    const primaryRedirect = clientRedirectUri || process.env.DISCORD_REDIRECT_URI || 'https://vantasite-puce.vercel.app';
+    const candidateRedirects = Array.from(new Set([
+      primaryRedirect,
+      'https://vantasite-puce.vercel.app',
+      'https://vantasite-puce.vercel.app/',
+      'http://localhost:3000',
+      'localhost:3000',
+    ]));
 
-    console.log(`[OAuth2] Trocando código Discord... ClientID: ${clientId}, Redirect: ${redirectUri}`);
+    console.log(`[OAuth2] Trocando código Discord... ClientID: ${clientId}, Primary: ${primaryRedirect}`);
 
     // Extrai IP real e User-Agent para telemetria de segurança e detecção de alts pelo bot
     const forwarded = req.headers.get('x-forwarded-for');
     const clientIp = forwarded ? forwarded.split(',')[0].trim() : '127.0.0.1';
     const userAgent = req.headers.get('user-agent') || 'Browser Web';
 
-    // Try token exchange with Discord API
-    const tokenParams = new URLSearchParams({
-      client_id: clientId,
-      client_secret: clientSecret,
-      grant_type: 'authorization_code',
-      code: code,
-      redirect_uri: redirectUri,
-    });
+    let tokenResponse: Response | null = null;
+    let successfulRedirect = primaryRedirect;
 
-    let tokenResponse = await fetch('https://discord.com/api/v10/oauth2/token', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: tokenParams.toString(),
-    });
-
-    // If Discord returns an error with http://localhost:3000, retry with localhost:3000 (without scheme) or vice versa
-    if (!tokenResponse.ok) {
-      const errorData = await tokenResponse.json();
-      console.warn('[OAuth2] Primeira tentativa falhou:', errorData);
-
-      const altRedirect = redirectUri.includes('://') ? 'localhost:3000' : 'http://localhost:3000';
-      tokenParams.set('redirect_uri', altRedirect);
+    // Tenta cada redirect URI candidato até obter sucesso
+    for (const redirectCandidate of candidateRedirects) {
+      const tokenParams = new URLSearchParams({
+        client_id: clientId,
+        client_secret: clientSecret,
+        grant_type: 'authorization_code',
+        code: code,
+        redirect_uri: redirectCandidate,
+      });
 
       tokenResponse = await fetch('https://discord.com/api/v10/oauth2/token', {
         method: 'POST',
@@ -52,6 +51,19 @@ export async function POST(req: NextRequest) {
         },
         body: tokenParams.toString(),
       });
+
+      if (tokenResponse.ok) {
+        successfulRedirect = redirectCandidate;
+        console.log(`[OAuth2] Troca de token bem-sucedida usando redirect_uri: ${redirectCandidate}`);
+        break;
+      } else {
+        const errorData = await tokenResponse.clone().json().catch(() => ({}));
+        console.warn(`[OAuth2] Tentativa com '${redirectCandidate}' falhou:`, errorData);
+      }
+    }
+
+    if (!tokenResponse) {
+      return NextResponse.json({ error: 'Falha ao conectar com o serviço OAuth2 do Discord' }, { status: 500 });
     }
 
     let tokenData: any = null;

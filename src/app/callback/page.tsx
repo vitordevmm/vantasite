@@ -32,7 +32,10 @@ function CallbackContent() {
         const res = await fetch('/api/auth/callback', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ code: code || 'demo-code' }),
+          body: JSON.stringify({
+            code: code || 'demo-code',
+            redirectUri: typeof window !== 'undefined' ? window.location.origin : 'https://vantasite-puce.vercel.app',
+          }),
         });
 
         const data = await res.json();

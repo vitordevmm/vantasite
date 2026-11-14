@@ -119,7 +119,8 @@ El ecosistema Vanta adopta una estética sobria, austera y elegante en Dorado y 
 
 Vantinha es un sistema propietario y cerrado, operado exclusivamente para la **Comunidad Vanta**:
 
-* **Añadir el Bot**: [Invitar a Vantinha a tu Servidor de Discord](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=localhost%3A3000&scope=identify+guilds+guilds.join)
+* **Portal Oficial en Producción**: [https://vantasite-puce.vercel.app](https://vantasite-puce.vercel.app)
+* **Añadir el Bot**: [Invitar a Vantinha a tu Servidor de Discord](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=https%3A%2F%2Fvantasite-puce.vercel.app&scope=identify+guilds+guilds.join)
 * **Comunidad Oficial**: [Unirse a Vanta Hub en Discord](https://discord.gg/vanta)
 * **Panel Web**: Autenticación segura mediante Discord OAuth2 para miembros autorizados.
 

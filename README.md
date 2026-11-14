@@ -110,23 +110,18 @@ O ecossistema Vanta adota uma estética minimalista, austera e nobre:
 | **`vanta`** | `#0a0a0c` | Fundo principal da página (Vantablack aesthetic) |
 | **`vantaDark`** | `#121217` | Fundo de cartões, modais, sidebars e containers |
 | **`vantaLight`** | `#1c1c24` | Bordas sutis, divisórias e cartões secundários |
-| **`vantaAccent`** | `#7c3aed` | Roxo elétrico (identidade do bot Discord e badges de sistema) |
-| **`vantaCyan`** | `#06b6d4` | Ciano neon (gráficos, métricas ativas e indicadores online) |
 | **`success`** | `#22c55e` | Verde esmeralda de aprovação e verificado |
 | **`danger`** | `#ED4245` | Vermelho de alerta, banimento e bloqueio de alts |
 | **`warning`** | `#fbbd23` | Amarelo de atenção para proxies ou contas suspeitas |
 
 ---
 
-## 📂 Estrutura do Repositório
-
-```
-vantasite/
 ## 🌐 Ecossistema & Acesso Oficial
 
 O Vantinha é um sistema fechado e proprietário, operado exclusivamente para os servidores da **Comunidade Vanta**:
 
-* **Adicionar o Bot**: [Convidar Vantinha para o seu Servidor](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=localhost%3A3000&scope=identify+guilds+guilds.join)
+* **Portal Oficial em Produção**: [https://vantasite-puce.vercel.app](https://vantasite-puce.vercel.app)
+* **Adicionar o Bot**: [Convidar Vantinha para o seu Servidor](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=https%3A%2F%2Fvantasite-puce.vercel.app&scope=identify+guilds+guilds.join)
 * **Comunidade Oficial**: [Entrar no Vanta Hub](https://discord.gg/vanta)
 * **Painel Web**: Autenticação segura via Discord OAuth2 disponível para membros autorizados.
 

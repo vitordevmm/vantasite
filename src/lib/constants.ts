@@ -1,4 +1,10 @@
+export const PRODUCTION_URL = "https://vantasite-puce.vercel.app";
+
 export const VANTA_CONSTANTS = {
+  site: {
+    url: PRODUCTION_URL,
+    domain: "vantasite-puce.vercel.app",
+  },
   bot: {
     name: "Vantinha",
     tag: "Vantinha#0419",
@@ -9,11 +15,11 @@ export const VANTA_CONSTANTS = {
     gatewayPort: 8080,
     cipher: "AES-256-GCM",
     status: "Online",
-    uptime: "99.9%",
+    uptime: "Online",
     wsPing: "85ms",
     inviteUrl: "https://discord.com/oauth2/authorize?client_id=1567751920645308548&permissions=8&integration_type=0&scope=bot+applications.commands",
     supportUrl: "https://discord.gg/vanta",
-    authUrl: "https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=localhost%3A3000&scope=identify+guilds+guilds.join",
+    authUrl: "https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=https%3A%2F%2Fvantasite-puce.vercel.app&scope=identify+guilds+guilds.join",
   },
   colors: {
     gold: "#E5A93C",

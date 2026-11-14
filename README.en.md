@@ -120,7 +120,8 @@ The Vanta visual design adopts an austere, noble Vantablack and Gold aesthetic:
 
 Vantinha is a proprietary, closed ecosystem operated exclusively for the **Vanta Community**:
 
-* **Add the Bot**: [Invite Vantinha to your Discord Server](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=localhost%3A3000&scope=identify+guilds+guilds.join)
+* **Official Production Portal**: [https://vantasite-puce.vercel.app](https://vantasite-puce.vercel.app)
+* **Add the Bot**: [Invite Vantinha to your Discord Server](https://discord.com/oauth2/authorize?client_id=1567751920645308548&response_type=code&redirect_uri=https%3A%2F%2Fvantasite-puce.vercel.app&scope=identify+guilds+guilds.join)
 * **Official Community**: [Join Vanta Hub on Discord](https://discord.gg/vanta)
 * **Web Dashboard**: Secure Discord OAuth2 authentication for authorized community members.
 
