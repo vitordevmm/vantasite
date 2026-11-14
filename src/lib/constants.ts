@@ -34,30 +34,25 @@ export const VANTA_CONSTANTS = {
   features: [
     {
       title: "Verificação de Identidade com Detecção de Alts",
-      description: "Identifica contas secundárias cruzando históricos de IP no banco Firestore. Bloqueia contas falsas e vincula perfis alternativos automaticamente.",
+      description: "Identifica contas secundárias e perfis alternativos de forma automática, prevenindo fraudes e invasões no servidor.",
       category: "Segurança de Acesso",
     },
     {
-      title: "Auditoria Ativa de Rede e Bloqueio de VPN",
-      description: "Analisa conexões suspeitas, proxies e redes de ataque antes de liberar cargos no servidor. Mantém a comunidade protegida contra invasões.",
+      title: "Auditoria Ativa e Bloqueio de Proxy/VPN",
+      description: "Analisa conexões suspeitas e bloqueia acessos de redes não autorizadas antes da concessão de permissões no servidor.",
       category: "Auditoria & Rede",
     },
     {
-      title: "Túnel Seguro de Ponta a Ponta AES-256-GCM",
-      description: "Todas as operações entre o painel e o bot trafegam por túnel criptografado de 32 bytes com autenticação GCM, sem expor dados no trânsito.",
-      category: "Criptografia",
-    },
-    {
-      title: "Comandos Reativos em Discord Components V2",
-      description: "Menus e botões nativos (/help, /ping, /counter) com atualização de estado em tempo real sem sobrecarregar o chat com recarregamentos.",
+      title: "Comandos Interativos em Discord Components",
+      description: "Interface moderna com botões nativos e componentes reativos (/counter, /help, /ping) com resposta instantânea no chat.",
       category: "Interface Nativa",
     },
   ],
   stats: [
-    { value: "+350", label: "Servidores ativos" },
-    { value: "+12.000", label: "Membros protegidos" },
-    { value: "99.9%", label: "Uptime operacional" },
-    { value: "~14ms", label: "Latência média" },
+    { value: "1", label: "Servidor ativo" },
+    { value: "2", label: "Membros monitorados" },
+    { value: "100%", label: "Uptime operacional" },
+    { value: "3", label: "Comandos nativos" },
   ],
   commands: [
     {

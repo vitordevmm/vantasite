@@ -75,7 +75,7 @@ function VerifyContent() {
         });
       }
     } catch (err: any) {
-      setError(err.message || 'Erro ao comunicar com o servidor Fastify do bot');
+      setError(err.message || 'Erro ao conectar ao serviço de verificação do bot');
     } finally {
       setSubmitting(false);
     }

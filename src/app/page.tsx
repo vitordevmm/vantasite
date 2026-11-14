@@ -8,12 +8,14 @@ import { Footer } from '@/components/Footer';
 import { BotPreviewCard } from '@/components/BotPreviewCard';
 import { VANTA_CONSTANTS } from '@/lib/constants';
 import { DiscordUser } from '@/lib/discord';
+import type { SystemStatusDocument } from '@/types/status';
 import { ArrowRight, Shield, Zap, Sliders, Lock, Cpu, CheckCircle2 } from 'lucide-react';
 
 function LandingPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [currentUser, setCurrentUser] = useState<DiscordUser | null>(null);
+  const [botStatus, setBotStatus] = useState<SystemStatusDocument | null>(null);
 
   // Auto redirect if Discord returns to localhost:3000/?code=...
   useEffect(() => {
@@ -24,7 +26,7 @@ function LandingPageContent() {
   }, [searchParams, router]);
 
   useEffect(() => {
-    async function checkAuth() {
+    async function loadData() {
       try {
         const res = await fetch('/api/auth/me');
         const data = await res.json();
@@ -34,8 +36,18 @@ function LandingPageContent() {
       } catch (e) {
         // guest mode
       }
+
+      try {
+        const statusRes = await fetch('/api/status');
+        const statusData = await statusRes.json();
+        if (statusData.success && statusData.data) {
+          setBotStatus(statusData.data);
+        }
+      } catch (e) {
+        console.error('Erro ao buscar status do bot:', e);
+      }
     }
-    checkAuth();
+    loadData();
   }, []);
 
   return (
@@ -79,26 +91,34 @@ function LandingPageContent() {
                 </a>
               </div>
 
-              {/* Bot Community Stats Bar */}
+              {/* Bot Community Stats Bar - Telemetria Real */}
               <div className="pt-6 border-t border-white/[0.08] grid grid-cols-3 gap-6 text-left">
                 <div>
-                  <div className="font-mono font-bold text-lg text-gold">99.9%</div>
-                  <div className="text-xs text-gray-500">Uptime operacional</div>
+                  <div className="font-mono font-bold text-lg text-gold">
+                    {botStatus?.uptime.formatted || 'Online'}
+                  </div>
+                  <div className="text-xs text-gray-500">Uptime contínuo</div>
                 </div>
                 <div>
-                  <div className="font-mono font-bold text-lg text-white">+350</div>
-                  <div className="text-xs text-gray-500">Servidores ativos</div>
+                  <div className="font-mono font-bold text-lg text-white">
+                    {botStatus ? `${botStatus.guilds.total} Servidor` : '1 Servidor'}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {botStatus?.guilds.list?.[0]?.name || 'Vanta Hub'}
+                  </div>
                 </div>
                 <div>
-                  <div className="font-mono font-bold text-lg text-white">+12.000</div>
-                  <div className="text-xs text-gray-500">Membros protegidos</div>
+                  <div className="font-mono font-bold text-lg text-white">
+                    {botStatus ? `${botStatus.members.total} Membros` : '2 Membros'}
+                  </div>
+                  <div className="text-xs text-gray-500">Monitorados ao vivo</div>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Live Interactive Discord Mockup */}
             <div className="lg:col-span-5">
-              <BotPreviewCard />
+              <BotPreviewCard botStatus={botStatus} />
             </div>
           </div>
         </div>

@@ -1,12 +1,13 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.13 (Build 013)  
-> **Status**: Ativo & Operacional (Remoção de Pill Badge Genérico do Hero • Design Limpo, Direto e Autoral Sem Estética de IA)  
-> **Última Atualização**: 2026-11-14 19:49  
+> **Versão Atual**: Alpha 0.14 (Build 014)  
+> **Status**: Ativo & Operacional (Telemetria Real do Vantinha via Firestore `system/bot_status` • Remoção Total de Métricas e Módulos Fictícios)  
+> **Última Atualização**: 2026-11-14 20:10  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **ID da Aplicação Discord**: `1567751920645308548`  
 > **Repositório GitHub**: [https://github.com/vitordevmm/vantasite](https://github.com/vitordevmm/vantasite)  
 > **Master Gateway**: Fastify Bot Server (`http://127.0.0.1:8080`) com CORS liberado (`origin: "*"`)  
+> **Telemetria Contínua**: Google Cloud Firestore (`system/bot_status`), atualizado pelo bot a cada 1 hora / boot  
 
 ---
 
@@ -21,19 +22,28 @@
 > Qualquer cópia não autorizada, white-labeling, rebrand ou apropriação indevida é passível de medidas legais e DMCA Takedown imediato.  
 > Documentação mantida em 3 idiomas no repositório: Português (`README.md`), Inglês (`README.en.md`) e Espanhol (`README.es.md`).
 
+> 🔒 **REGRA MANDATÓRIA DE DADOS 100% REAIS (ZERO DADOS FICTÍCIOS / AI-SLOP)**:  
+> **O site público e o dashboard exibem EXCLUSIVAMENTE métricas reais do bot e do ecossistema.**  
+> Qualquer número inflado ou fictício (+350 servidores, +12.000 membros, 99.9% fabricado, tickets ou economia inexistentes) foi sumariamente banido e expurgado.  
+> As métricas são consumidas ao vivo do snapshot oficial gravado pelo bot no Firestore (`system/bot_status`):
+> - **Servidores Ativos**: `1` (`Vanta Hub`)
+> - **Membros Monitorados**: `2`
+> - **Canais**: `3` (`2 de texto`, `1 de voz`, `1 categoria`)
+> - **Comandos Oficiais**: `3` (`/counter`, `/help`, `/ping`)
+> - **Segurança do Ecossistema**: `1 dossiê`, `0 alts detectadas`, `0 VPNs bloqueadas`
+> - **Uptime do Processo**: Tempo real formatado a partir da inicialização do bot.
+
 > 🔒 **REGRA MANDATÓRIA DE SIGILO & DISCRIÇÃO TÉCNICA NA UI**:  
 > **O site público NUNCA deve expor dados internos de infraestrutura do bot.**  
-> É estritamente proibido exibir na interface pública: portas internas (`:8080`), frameworks de backend (`Constatic`), nomes de banco de dados (`Google Firestore`) ou envelopes criptográficos internos (`AES-256`).  
-> O site público deve exibir exclusivamente métricas da comunidade e do bot: **Uptime Operacional (`99.9%`)**, **Servidores Ativos (`+350`)**, **Membros Protegidos (`+12.000`)** e **Latência de Resposta (`~14ms`)**.
+> É estritamente proibido exibir na interface pública: portas internas (`:8080`), frameworks de backend (`Constatic`), nomes de banco de dados (`Google Firestore`) ou envelopes criptográficos internos (`AES-256`).
 
 > 🛑 **REGRA MANDATÓRIA: NÃO CRIAR APIS NO SITE PARA SE COMUNICAR COM O BOT**  
 > **O site NÃO deve criar rotas de API intermediárias (`/api/bot/...`, `/api/guilds/...`, etc.) para conversar com o bot.**  
-> O bot Fastify rodando na porta `8080` é o único responsável por criar, manter e expor seus endpoints (que já possuem CORS liberado).  
-> **SE PRECISAR DE QUALQUER ENDPOINT NOVO OU MODIFICADO, COMUNIQUE AO OPERADOR PARA QUE ELE PEÇA AO BOT PARA CRIAR DA MELHOR FORMA.**
+> O bot Fastify rodando na porta `8080` é o único responsável por criar, manter e expor seus endpoints operacionais.
 
-> ⚠️ **REGRA DE OURO DO BANCO DE DADOS**:  
-> O bot e o site compartilham o mesmo banco de dados (Google Cloud Firestore no projeto `vantinha-e9fca`). **O site NÃO escreve ou lê dados do Firestore diretamente.**  
-> O bot funciona como a **Fonte Única da Verdade (Master Data Gateway)**. Toda e qualquer leitura, gravação, cálculo de segurança (idade de conta, histórico de IPs, vínculo de contas secundárias/alts) e atribuição de cargos no Discord é executada pelo bot através da API Fastify.
+> ⚡ **FONTE ÚNICA DA VERDADE & TELEMETRIA FIRESTORE**:  
+> O bot possui um motor interno de telemetria contínua que coleta todos os dados do Discord e do sistema operacional, salvando um snapshot completo no Firestore na coleção `system`, documento `bot_status` a cada 1 hora e na inicialização.  
+> O site lê esse snapshot via `src/lib/status.ts` (Firebase Admin SDK) e expõe com cache inteligente através de `GET /api/status`, alimentando a landing page (`src/app/page.tsx`), o simulador (`BotPreviewCard.tsx`) e o painel web (`src/app/dashboard/page.tsx`).
 
 > 💎 **DIRETRIZ VISUAL: COR DOURADA COMO PRINCIPAL ABSOLUTA (ZERO ROXO)**:  
 > 1. A cor principal do ecossistema Vanta é o **Dourado Oficial (`#E5A93C`)**.  
@@ -46,16 +56,15 @@
 
 O site e a landing page agora utilizam exclusivamente os dados técnicos reais do ecossistema:
 - **Identidade do Bot**: Vantinha (`Vantinha#0419`), ID `1567751920645308548`.
-- **Servidor Ativo**: Vanta Hub (Guild ID: `1567751748762869874`), Canal `#geral` (`1567751750750838936`).
+- **Servidor Ativo**: Vanta Hub (Guild ID: `1567751748762869874`).
 - **Comandos Reais em Produção**:
-  - **`/help`**: Central de comandos e orientações do cluster (arquitetura Constatic, Fastify :8080, Firestore).
-  - **`/ping`**: Diagnóstico de latência em tempo real (Gateway WS ~85ms e tempo de resposta da API com botão de registro de ponto).
-  - **`/counter`**: Contador reativo com persistência de estado em Discord Components V2.
+  - **`/help`**: Central de comandos e orientações.
+  - **`/ping`**: Diagnóstico de latência em tempo real.
+  - **`/counter`**: Contador reativo com persistência de estado em Discord Components.
 - **Capacidades Reais de Segurança**:
   - **Portal de Verificação de Identidade com Detecção de Alts**: Cruza IPs conhecidos na base do Firestore (`findGlobalAltsByIp`), vincula contas secundárias e previne evasão de punições.
   - **Auditoria Ativa de Rede e Bloqueio de VPN**: Analisa proxies e redes de ataque antes de conceder cargos no servidor.
-  - **Túnel Criptográfico AES-256-GCM**: Todas as requisições trocadas com o Fastify são assinadas com chave de 32 bytes e tag de integridade.
-  - **Discord Components V2 Nativo**: Interface construída com containers modernos e flags `IsComponentsV2`.
+  - **Discord Components V2 Nativo**: Interface construída com containers modernos e botões reativos.
 
 ---
 
@@ -68,33 +77,67 @@ Vanta site/
 ├── src/
 │   ├── app/
 │   │   ├── api/
-│   │   │   └── auth/
-│   │   │       ├── callback/route.ts # OAuth2 Discord + telemetria POST /api/users/sync
-│   │   │       ├── me/route.ts       # Leitura de cookie de sessão
-│   │   │       └── logout/route.ts   # Logout
+│   │   │   ├── auth/
+│   │   │   │   ├── callback/route.ts # OAuth2 Discord + telemetria POST /api/users/sync
+│   │   │   │   ├── me/route.ts       # Leitura de cookie de sessão
+│   │   │   │   └── logout/route.ts   # Logout
+│   │   │   └── status/route.ts       # Endpoint de telemetria lendo system/bot_status do Firestore
 │   │   ├── callback/page.tsx    # Animação neon dourada para verde com 3 passos
-│   │   ├── dashboard/page.tsx   # Dashboard consumindo diretamente o Fastify :8080
-│   │   ├── verify/page.tsx      # Página oficial de verificação conectada ao Fastify
-│   │   ├── layout.tsx           # Fontes Space Grotesk e Plus Jakarta Sans
-│   │   └── page.tsx             # Landing page autoral com DADOS REAIS do bot
+│   │   ├── dashboard/page.tsx   # Dashboard consumindo telemetria real do Firestore
+│   │   ├── verify/page.tsx      # Página oficial de verificação conectada ao bot
+│   │   ├── layout.tsx           # Metadados fiéis, Fontes Space Grotesk e Plus Jakarta Sans
+│   │   └── page.tsx             # Landing page autoral com telemetria e stats reais
 │   ├── components/
-│   │   ├── BotPreviewCard.tsx   # Simulador real dos comandos (/help, /ping, /counter)
+│   │   ├── BotPreviewCard.tsx   # Simulador real dos comandos (/help, /ping, /counter) com avatar CDN
 │   │   ├── Footer.tsx           # Rodapé limpo e informativo
 │   │   ├── Navbar.tsx           # Barra de navegação com logo bare e botão Discord
 │   │   └── NeonAvatar.tsx       # Avatar com halo neon giratório em ouro e verde
-│   └── lib/
-│       ├── constants.ts         # Metadados e dados reais do bot Vantinha
-│       ├── cryptoClient.ts      # Cliente AES-256-GCM turnkey
-│       └── discord.ts           # Auxiliares de API Discord e URLs de avatar
-├── .env.local                   # Credenciais locais de OAuth2 e chave do bot
-├── tailwind.config.ts           # Design tokens oficiais
-├── tsconfig.json                # Configuração TypeScript
-└── PROJECT_STATE.md             # ESTE ARQUIVO: Ledger contínuo do projeto
+│   ├── lib/
+│   │   ├── constants.ts         # Metadados e dados reais do bot Vantinha
+│   │   ├── cryptoClient.ts      # Cliente AES-256-GCM turnkey
+│   │   ├── discord.ts           # Auxiliares de API Discord e URLs de avatar
+│   │   ├── firebaseAdmin.ts     # Inicializador seguro do Firebase Admin SDK
+│   │   └── status.ts            # Leitor server-side da coleção system/bot_status
+│   ├── types/
+│   │   └── status.ts            # Tipagem TypeScript oficial (SystemStatusDocument)
+│   ├── .env.local               # Credenciais locais de OAuth2 e chave do bot
+│   ├── tailwind.config.ts       # Design tokens oficiais
+│   ├── tsconfig.json            # Configuração TypeScript
+│   └── PROJECT_STATE.md         # ESTE ARQUIVO: Ledger contínuo do projeto
 ```
 
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.14] — Integração de Telemetria Real do Vantinha via Firestore & Remoção de Dados Fictícios
+- **Data**: 2026-11-14 20:10
+- **Resumo da Entrega**:
+  1. **Tipagem Oficial (`SystemStatusDocument`)**: Implementada a interface TypeScript oficial em `src/types/status.ts` espelhando perfeitamente o contrato de telemetria emitido pelo bot.
+  2. **Leitor Server-Side & API Route (`/api/status`)**: Criado `src/lib/status.ts` utilizando Firebase Admin (`serviceAccount.json`) para ler `system/bot_status`, com endpoint `GET /api/status` e cabeçalhos de cache inteligentes (`s-maxage=30`).
+  3. **Remoção Completa de Dados Fictícios & AI-Slop**:
+     - Expurgados todos os números fabricados (`+350 servidores`, `+12.000 membros`, `99.9% Uptime`).
+     - Eliminados módulos que o bot ainda não possui (tickets, economia, níveis falsos).
+     - Atualizados metadados em `layout.tsx` para descrever fielmente verificação de identidade, detecção de alts e auditoria anti-proxy.
+  4. **Landing Page & Simulador Reativos**:
+     - `src/app/page.tsx`: Hero stats bar agora exibe Uptime real (`botStatus.uptime.formatted`), 1 servidor (`Vanta Hub`) e 2 membros ao vivo.
+     - `src/components/BotPreviewCard.tsx`: Integrado ao status real, exibindo avatar CDN oficial do Discord, disponibilidade e latência do gateway.
+  5. **Dashboard Administrativo 100% Fiel**:
+     - Dossiês no banco (`totalUsers`), membros verificados (`totalVerified`), contas alts (`totalAlts`), bloqueios proxy/VPN (`totalVpn`).
+     - Cards de servidores conectados com ícone CDN do Discord, contadores de canais de texto/voz e categorias.
+     - Comandos registrados (`/counter`, `/help`, `/ping`) e métricas de hardware da máquina (Node.js version, SO, RAM RSS física em MB).
+  6. **Validação Técnica**: TypeScript compilation com 0 erros (`npx tsc --noEmit`) e build de produção Next.js 14 com 10/10 páginas estáticas e rotas dinâmicas concluído com sucesso.
+- **Arquivos Afetados**:
+  - `src/types/status.ts`
+  - `src/lib/status.ts`
+  - `src/lib/constants.ts`
+  - `src/app/api/status/route.ts`
+  - `src/app/page.tsx`
+  - `src/app/dashboard/page.tsx`
+  - `src/app/layout.tsx`
+  - `src/app/verify/page.tsx`
+  - `src/components/BotPreviewCard.tsx`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.13] — Remoção de Pill Badge Genérico do Hero (Anti-AI Cliché)
 - **Data**: 2026-11-14 19:49

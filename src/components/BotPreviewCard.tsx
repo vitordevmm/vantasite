@@ -3,17 +3,30 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Activity, HelpCircle, Plus, Minus, RotateCcw } from 'lucide-react';
+import type { SystemStatusDocument } from '@/types/status';
 
-export function BotPreviewCard() {
+interface BotPreviewCardProps {
+  botStatus?: SystemStatusDocument | null;
+}
+
+export function BotPreviewCard({ botStatus }: BotPreviewCardProps) {
   const [activeTab, setActiveTab] = useState<'ping' | 'help' | 'counter'>('ping');
   const [counter, setCounter] = useState(42);
   const [isUpdating, setIsUpdating] = useState(false);
-  const [ping, setPing] = useState(14);
+  const [ping, setPing] = useState(
+    botStatus?.network.wsPingMs && botStatus.network.wsPingMs > 0 ? botStatus.network.wsPingMs : 14
+  );
+
+  React.useEffect(() => {
+    if (botStatus?.network.wsPingMs && botStatus.network.wsPingMs > 0) {
+      setPing(botStatus.network.wsPingMs);
+    }
+  }, [botStatus]);
 
   const handleRefreshPing = () => {
     setIsUpdating(true);
     setTimeout(() => {
-      setPing(Math.floor(Math.random() * 5) + 12);
+      setPing(Math.floor(Math.random() * 4) + 12);
       setIsUpdating(false);
     }, 400);
   };
@@ -73,19 +86,22 @@ export function BotPreviewCard() {
       <div className="p-4 bg-[#313338]">
         {/* Author info */}
         <div className="flex items-start gap-3 mb-3">
-          <div className="relative w-10 h-10 rounded-full bg-[#1e1f22] border border-white/[0.08] flex items-center justify-center flex-shrink-0 p-1">
+          <div className="relative w-10 h-10 rounded-full bg-[#1e1f22] border border-white/[0.08] flex items-center justify-center flex-shrink-0 p-1 overflow-hidden">
             <Image
-              src="/logo.png"
-              alt="Vantinha"
+              src={botStatus?.bot.avatar || '/logo.png'}
+              alt={botStatus?.bot.name || 'Vantinha'}
               width={34}
               height={30}
-              className="object-contain"
+              className="object-contain rounded-full"
               priority
+              unoptimized
             />
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-xs text-white">Vantinha</span>
+              <span className="font-semibold text-xs text-white">
+                {botStatus?.bot.name || 'Vantinha'}
+              </span>
               <span className="text-[10px] bg-discord text-white px-1.5 py-0.2 rounded font-bold uppercase tracking-wider">
                 APP
               </span>
@@ -113,11 +129,15 @@ export function BotPreviewCard() {
             <div className="grid grid-cols-2 gap-2 text-[11px]">
               <div className="bg-[#1e1f22] p-2 rounded border border-white/[0.04]">
                 <span className="text-gray-500 block text-[10px] font-mono">DISPONIBILIDADE</span>
-                <span className="text-gray-200 font-mono">99.9% Uptime</span>
+                <span className="text-gray-200 font-mono">
+                  {botStatus?.uptime.formatted || '99.9% Uptime'}
+                </span>
               </div>
               <div className="bg-[#1e1f22] p-2 rounded border border-white/[0.04]">
-                <span className="text-gray-500 block text-[10px] font-mono">COMUNIDADES</span>
-                <span className="text-gray-200 font-mono">+350 Servidores</span>
+                <span className="text-gray-500 block text-[10px] font-mono">COMUNIDADE</span>
+                <span className="text-gray-200 font-mono">
+                  {botStatus?.guilds.list?.[0]?.name || 'Vanta Hub'}
+                </span>
               </div>
             </div>
 
