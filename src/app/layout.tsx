@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Space_Grotesk, Plus_Jakarta_Sans } from 'next/font/google';
+import { CookieConsent } from '@/components/CookieConsent';
 import './globals.css';
 
 const spaceGrotesk = Space_Grotesk({
@@ -52,6 +53,7 @@ export default function RootLayout({
         </div>
 
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

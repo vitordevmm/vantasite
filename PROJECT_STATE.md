@@ -1,8 +1,8 @@
 # VANTA SITE — ESTADO, PREFERÊNCIAS & LEDGER
 
-> **Versão Atual**: Alpha 0.15 (Build 015)  
-> **Status**: Ativo & Operacional em Produção Vercel (`https://vantasite-puce.vercel.app`) • Domínio, OAuth2 e Links Oficiais Atualizados  
-> **Última Atualização**: 2026-11-14 20:15  
+> **Versão Atual**: Alpha 0.16 (Build 016)  
+> **Status**: Ativo & Operacional em Produção Vercel (`https://vantasite-puce.vercel.app`) • Termos de Uso, Política de Privacidade e Consentimento de Cookies LGPD  
+> **Última Atualização**: 2026-11-14 20:20  
 > **Framework**: Next.js 14 (App Router) + TypeScript + Tailwind CSS  
 > **Domínio Oficial de Produção**: `https://vantasite-puce.vercel.app`  
 > **ID da Aplicação Discord**: `1567751920645308548`  
@@ -85,12 +85,17 @@ Vanta site/
 │   │   │   └── status/route.ts       # Endpoint de telemetria lendo system/bot_status do Firestore
 │   │   ├── callback/page.tsx    # Animação neon dourada para verde com 3 passos
 │   │   ├── dashboard/page.tsx   # Dashboard consumindo telemetria real do Firestore
+│   │   ├── privacidade/page.tsx # Política de Privacidade e Proteção de Dados (LGPD)
+│   │   ├── privacy/page.tsx     # Alias /privacy para Developer Portal do Discord
+│   │   ├── termos/page.tsx      # Termos de Uso e Condições de Serviço Oficiais
+│   │   ├── terms/page.tsx       # Alias /terms para Developer Portal do Discord
 │   │   ├── verify/page.tsx      # Página oficial de verificação conectada ao bot
-│   │   ├── layout.tsx           # Metadados fiéis, Fontes Space Grotesk e Plus Jakarta Sans
+│   │   ├── layout.tsx           # Metadados fiéis, Fontes Space Grotesk, Plus Jakarta Sans e CookieConsent
 │   │   └── page.tsx             # Landing page autoral com telemetria e stats reais
 │   ├── components/
 │   │   ├── BotPreviewCard.tsx   # Simulador real dos comandos (/help, /ping, /counter) com avatar CDN
-│   │   ├── Footer.tsx           # Rodapé limpo e informativo
+│   │   ├── CookieConsent.tsx    # Banner e gerenciador de consentimento de cookies LGPD
+│   │   ├── Footer.tsx           # Rodapé limpo com colunas de navegação e links legais
 │   │   ├── Navbar.tsx           # Barra de navegação com logo bare e botão Discord
 │   │   └── NeonAvatar.tsx       # Avatar com halo neon giratório em ouro e verde
 │   ├── lib/
@@ -110,6 +115,33 @@ Vanta site/
 ---
 
 ## 4. Histórico de Versões e Atualizações (Changelog Numerado)
+
+### [Alpha 0.16] — Termos de Uso, Política de Privacidade & Consentimento de Cookies LGPD
+- **Data**: 2026-11-14 20:20
+- **Resumo da Entrega**:
+  1. **Termos de Uso (`/termos` & `/terms`)**:
+     - Criada a página oficial [src/app/termos/page.tsx](file:///c:/Users/pc/Documents/Vanta%20site/src/app/termos/page.tsx) detalhando regras de aceitação, condutas proibidas (anti-alts, proibição de raids, exploração de falhas e plágio de código), autenticação Discord OAuth2, propriedade intelectual protegida e canais de contato.
+     - Criado alias `/terms` para compatibilidade com o Discord Developer Portal.
+  2. **Política de Privacidade (`/privacidade` & `/privacy`)**:
+     - Criada a página oficial [src/app/privacidade/page.tsx](file:///c:/Users/pc/Documents/Vanta%20site/src/app/privacidade/page.tsx) em conformidade com as diretrizes da LGPD (Lei Geral de Proteção de Dados).
+     - Detalhamento transparente dos dados coletados (ID Discord, IP para auditoria anti-proxy/alts), finalidade estrita de segurança, armazenamento em Firestore e cláusula absoluta de não-comercialização com terceiros.
+     - Criado alias `/privacy` para compatibilidade internacional.
+  3. **Sistema de Consentimento de Cookies (`CookieConsent.tsx`)**:
+     - Implementado o componente [src/components/CookieConsent.tsx](file:///c:/Users/pc/Documents/Vanta%20site/src/components/CookieConsent.tsx) com design minimalista em ouro e Vantablack (`#121217`, `border-gold/30`).
+     - Armazenamento em `localStorage` da escolha do usuário (`all` vs `essential`).
+     - Botão interativo no rodapé que permite reabrir as preferências de cookies a qualquer momento via evento customizado (`vanta:open-cookie-preferences`).
+  4. **Atualização do Rodapé Oficial**:
+     - Em [src/components/Footer.tsx](file:///c:/Users/pc/Documents/Vanta%20site/src/components/Footer.tsx), adicionada a coluna dedicada "Legal & Privacidade" com links diretos para `/termos`, `/privacidade` e botão de gerenciamento de cookies.
+  5. **Validação Técnica**: TypeScript compilation com 0 erros (`npx tsc --noEmit`) e build de produção Next.js 14 gerando 14/14 rotas estáticas e dinâmicas com sucesso.
+- **Arquivos Afetados**:
+  - `src/app/termos/page.tsx`
+  - `src/app/terms/page.tsx`
+  - `src/app/privacidade/page.tsx`
+  - `src/app/privacy/page.tsx`
+  - `src/components/CookieConsent.tsx`
+  - `src/components/Footer.tsx`
+  - `src/app/layout.tsx`
+  - `PROJECT_STATE.md`
 
 ### [Alpha 0.15] — Implantação em Produção na Vercel & Sincronização do Domínio OAuth2
 - **Data**: 2026-11-14 20:15

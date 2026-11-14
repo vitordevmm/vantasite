@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -18,7 +20,7 @@ export function Footer() {
               <span className="font-display font-bold text-lg text-white">Vantinha</span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed">
-              O assistente oficial para comunidades no Discord. Moderação ativa, economia, tickets e controle em tempo real.
+              O assistente oficial de segurança e telemetria da comunidade Vanta. Verificação de identidade, detecção de alts e comandos nativos.
             </p>
             <div className="flex items-center gap-2 pt-1 text-xs text-gray-400 font-mono">
               <span className="w-2 h-2 rounded-full bg-success" />
@@ -78,18 +80,46 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Infrastructure */}
+          {/* Legal & Privacy */}
           <div>
-            <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-gray-400 mb-3">Infraestrutura</h4>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Hospedado em cluster dedicado com sincronização contínua e alta disponibilidade 24/7.
-            </p>
+            <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-gray-400 mb-3">Legal & Privacidade</h4>
+            <ul className="space-y-2 text-xs text-gray-400">
+              <li>
+                <Link href="/termos" className="hover:text-gold transition-colors">
+                  Termos de Uso
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacidade" className="hover:text-gold transition-colors">
+                  Política de Privacidade
+                </Link>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (typeof window !== 'undefined') {
+                      window.dispatchEvent(new CustomEvent('vanta:open-cookie-preferences'));
+                    }
+                  }}
+                  className="hover:text-gold transition-colors text-left"
+                >
+                  Preferências de Cookies
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div className="pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500 font-mono">
           <p>© {new Date().getFullYear()} Comunidade Vanta. Todos os direitos reservados.</p>
-          <p>Dourado & Vantablack</p>
+          <div className="flex items-center gap-4">
+            <Link href="/termos" className="hover:text-gold transition-colors">Termos</Link>
+            <span>•</span>
+            <Link href="/privacidade" className="hover:text-gold transition-colors">Privacidade</Link>
+            <span>•</span>
+            <span>Dourado & Vantablack</span>
+          </div>
         </div>
       </div>
     </footer>
